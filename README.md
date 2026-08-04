@@ -1,8 +1,8 @@
-# mrwangyu2's Knowledge Base
+# mrwangyu2 的知识库
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github&logoColor=white)](https://github.com/mrwangyu2/knowledge)
 
-个人知识库，使用 **Karpathy LLM Wiki 方法论**构建：**增量、原子化、无花哨的纯粹 Markdown**，所有文件夹基于 AI-agent skills/tools。
+个人知识库，使用 **Karpathy LLM Wiki 方法论**构建：**增量、原子化、无花哨的纯粹 Markdown**。整个仓库基于 AI Agent Skills/Tools 驱动。
 
 ---
 
@@ -10,28 +10,28 @@
 
 ```
 knowledge/
-├── .agents/skills/              # AI Agent Skills (Matt Pocock style)
-│   ├── ask-matt/               # Ask Matt: route-aware skill dispatcher
-│   ├── code-review/            # Code review (Standards + Spec axes)
-│   ├── diagnosing-bugs/        # Bug diagnosis loop
-│   ├── domain-modeling/        # Domain language & ADRs
-│   ├── grilling/               # Relentless interview primitive
-│   ├── implement/              # Feature implementation driver
-│   ├── prototype/              # Throwaway prototypes, for design Qs not paper reasoning)
-│   ├── tdd/                      # Test-driven development loop
-│   └── ... (more skills: see .agents/skills/)
+├── .agents/skills/              # AI Agent Skills（Matt Pocock 风格）
+│   ├── ask-matt/               # Ask Matt：路由感知的技能分发器
+│   ├── code-review/            # 代码审查（标准 + 规范双轴评审）
+│   ├── diagnosing-bugs/        # Bug 诊断闭环
+│   ├── domain-modeling/        # 领域建模与 ADRs
+│   ├── grilling/               # 无情的访谈式追问原语
+│   ├── implement/              # 功能实现驱动器
+│   ├── prototype/              # 一次性原型（用于设计验证而非纸上推理）
+│   ├── tdd/                      # 测试驱动开发闭环
+│   └── ... (更多技能见 .agents/skills/)
 
-├── knowledge_ai               # 🧠 AI & LLM Infrastructure Wiki
-│   ├── CLAUDE.md              # Schema definition
-│   ├── index.md               # Content directory
-│   ├── raw/                   # Raw sources (immutable)
-│   └── wiki/                  # LLM-generated pages
-│       ├── entities/          # People, orgs, tools
-│       ├── concepts/          # Theories & paradigms
-│       └── frameworks/        # Architectures & patterns
+├── knowledge_ai               # 🧠 AI 与 LLM 基础设施 Wiki
+│   ├── CLAUDE.md              # Schema（规范定义。
+│   ├── index.md               # 内容目录
+│   ├── raw/                   # 原始来源（不可改，只供读取）
+│   └── wiki/                  # LLM 生成页面
+│       ├── entities/          # 人物、组织、工具等实体页
+│       ├── concepts/          # 理论 &范式概念页
+│       └── frameworks/        # 架构与框架
 
-├── knowledge_llm              # 🦙 LLM Toolchain Deep-Dives
-│   └── llama.cpp-guide.md     # 从零到生产使用 llama.cpp: 训练、量化、部署
+├── knowledge_llm              # 🦙 LLM 工具链深度探索
+│   └── llama.cpp-guide.md     # 从零到生产使用 llama.cpp:训练、量化、部署
 
 ├── knowledge_skills             # 🛠️ Knowledge Skills Index (Matt Pocock style)
 │   ├── Skills List.md           # All agent skills inventory
@@ -39,15 +39,8 @@ knowledge/
 │   ├── everything-claude-code.md  # Claude Code feature deep dive
 │   └── superpowers/superpowers.md  # Project Superpowers integration guide
 
-├── knowledge_vlog               # 📝 VitePress-based Personal Wiki Builder) & Knowledge Docs
+├── knowledge_vlog               # 📝 VitePress-based Personal Wiki Builder!) & Knowledge Docs
 │   └── Vite*Press tutorials (5 parts: init → deploy)
-
-├── knowledge_webrtc            # 🌐 WebRTC Protocol & Libnice 知识库
-│   ├── CLAUDE.md              # Schema definition
-│   ├── index.md               # Content directory
-│   ├── raw/                   # Original RFCs, drafts, XEP specs (read-only!)
-│   ├── wiki/                  # LLM-generated summaries/comparisons/tutorials
-│   └── bee_net/               # Self-designed BeeNet webrtc mesh protocol spec
 
 ├── node_modules/.agents/)
 
@@ -60,9 +53,9 @@ knowledge/
 
 ### Karpathy LLM Wiki Methodology (see karpathy's wiki methodology in each vault)
 
-1. **Raw** (`raw/`): original inputs — immutable source of truth! The LLM never mutates raw files.
-2. **Wiki** (`wiki/`): derived summaries, comparisons, tutorials generated & maintained by the LLM agent! 你读它，LLM写它。
-3. **Schema** (`CLAUDE.md` + `index.md` + `log.md`) 定义结构规范与工作流约定（人工+LLM共同演进）。
+1. **Raw** (`raw/`): 原始输入——不变的真理源！LLM 永远不会修改 raw 文件。
+2. **Wiki** (`wiki/`)：由 LLM Agent生成并维护的派生总结、对比和教程！你读它，LLM写它。
+3. **Schema**（`CLAUDE.md` + `index.md`）+ `log.md`：定义结构规范和工作流约定（人工与LLM共同演进）。
 
 ### Three-Layer Architecture Applied Per Vault
 
@@ -93,7 +86,7 @@ For full skill routes & flowchart: read `.agents/skills/ask-matt/SKILL.md`.
 | `knowledge_llm` | LLM model toolchain deep-dives | ✅ Stable | 
 | `knowledge_skills` | Matt Pocock-style agent skill index + research notes 🚧 WIP growing collection! | 
 | `knowledge_vlog` | VitePress-based personal wiki builder tutorials & docs 🚀 Functional! |
-| `knowledge_webrtc` | WebRTC protocol stack deep-dive (ICE/STUN/TURN/SRTP/GCC). libnice source tracing. BeeNet mesh protocol design spec 🏗️ Deep diving RFCs/source code daily! |
+| `knowledge_webrtc` | WebRTC protocol stack deep-dive (ICE/STUN/TURN/SRTP/GCC). libnice source tracing. BeeNet mesh protocol design spec 🏗️ Deep diving RFCs/source code daily! | 
 
 
 ### 🔮 Quick Start
