@@ -1,0 +1,10 @@
+improve-codebase-architecture
+code-quality
+impeccable
+startup-pressure-test
+sub-agent
+superpowers
+everything-claude-code
+ecc-superpowers-integration
+gstack-garrytan
+mattpocock-skills

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="520" fill="#ffffff" rx="16"/>
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">序列号 vs 时间戳</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Table header -->
+  <rect x="60" y="112" width="630" height="60" fill="#bbbbbb" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="374" y="152" font-size="26" font-weight="bold" fill="#991b1b" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">序列号 (Sequence Number)</text>
+  <rect x="710" y="112" width="630" height="60" fill="#bbbbbb" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="1024" y="152" font-size="26" font-weight="bold" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">时间戳 (Timestamp)</text>
+
+  <!-- Row 1 -->
+  <rect x="60" y="184" width="630" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="4" rx="0"/>
+  <text x="90" y="212" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">维度：</text>
+  <text x="170" y="212" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">包的次序</text>
+  <text x="90" y="244" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">规则：每发一包 +1</text>
+  <rect x="710" y="184" width="630" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="4" rx="0"/>
+  <text x="740" y="212" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">维度：</text>
+  <text x="820" y="212" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">采样的时刻</text>
+  <text x="740" y="244" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">规则：每采样间隔 +Δt</text>
+
+  <!-- Row 2 -->
+  <rect x="60" y="264" width="630" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="4" rx="0"/>
+  <text x="90" y="292" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">空间：</text>
+  <text x="170" y="292" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">均匀递增 1,2,3,4...</text>
+  <text x="90" y="324" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">含义："第几个包"</text>
+  <rect x="710" y="264" width="630" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="4" rx="0"/>
+  <text x="740" y="292" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">空间：</text>
+  <text x="820" y="292" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">可能不均匀跳跃</text>
+  <text x="740" y="324" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">含义："什么时候该播放"</text>
+
+  <!-- Bottom note -->
+  <text x="720" y="390" font-size="22" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">两个字段完全正交，各管各的维度</text>
+
+  <!-- Bottom colored labels -->
+  <rect x="120" y="430" width="32" height="32" fill="#991b1b" rx="6"/>
+  <text x="164" y="456" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">序列号 = 检测丢包 / 恢复乱序</text>
+  <rect x="680" y="430" width="32" height="32" fill="#1a3f8a" rx="6"/>
+  <text x="724" y="456" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">时间戳 = 恢复播放时刻 / 同步</text>
+</svg>

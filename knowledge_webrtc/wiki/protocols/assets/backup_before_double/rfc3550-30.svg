@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 780">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-down" viewBox="0 0 20 20" refX="10" refY="18" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 10 20 L 20 0 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="780" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="40" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">同一个问题: 发送方 2Mbps，接收方 A=5Mbps、B=500kbps、C=200kbps</text>
+
+  <!-- Column labels -->
+  <text x="360" y="120" font-size="26" font-weight="bold" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Mixer 思路 (复用单流)</text>
+  <text x="1080" y="120" font-size="26" font-weight="bold" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">层次编码思路 (分层多流)</text>
+
+  <!-- Divider -->
+  <line x1="720" y1="96" x2="720" y2="680" stroke="#bbbbbb" stroke-width="2" stroke-dasharray="8,8"/>
+
+  <!-- ===== LEFT: Mixer approach ===== -->
+
+  <!-- Source boxes (A, B, C as input) -->
+  <rect x="160" y="144" width="160" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="240" y="182" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">A 2Mbps</text>
+
+  <rect x="330" y="144" width="160" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="410" y="182" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">B 2Mbps</text>
+
+  <rect x="500" y="144" width="160" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="580" y="182" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">C 2Mbps</text>
+
+  <!-- Arrows down to Mixer -->
+  <line x1="240" y1="200" x2="240" y2="236" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="410" y1="200" x2="410" y2="236" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="580" y1="200" x2="580" y2="236" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+
+  <!-- Horizontal connector -->
+  <line x1="240" y1="226" x2="580" y2="226" stroke="#2563eb" stroke-width="3"/>
+
+  <!-- Mixer box -->
+  <rect x="260" y="256" width="300" height="80" fill="#f0f0f0" stroke="#dc2626" stroke-width="4" rx="12"/>
+  <text x="410" y="296" font-size="24" font-weight="bold" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Mixer 混合</text>
+  <text x="410" y="324" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">转 500kbps</text>
+
+  <!-- Arrow down from Mixer -->
+  <line x1="410" y1="336" x2="410" y2="380" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+
+  <!-- Fan out to receivers -->
+  <line x1="410" y1="390" x2="200" y2="390" stroke="#2563eb" stroke-width="3"/>
+  <line x1="410" y1="390" x2="620" y2="390" stroke="#2563eb" stroke-width="3"/>
+  <line x1="200" y1="390" x2="200" y2="420" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="410" y1="390" x2="410" y2="420" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="620" y1="390" x2="620" y2="420" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+
+  <!-- Receivers -->
+  <rect x="140" y="436" width="120" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="200" y="474" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">A</text>
+
+  <rect x="350" y="436" width="120" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="410" y="474" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">B</text>
+
+  <rect x="560" y="436" width="120" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="620" y="474" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">C</text>
+
+  <!-- Summary left -->
+  <rect x="80" y="530" width="560" height="56" fill="#f0f0f0" stroke="#dc2626" stroke-width="2" rx="8"/>
+  <text x="360" y="568" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">发送方适配 → 一份"折中质量"给所有人</text>
+
+  <!-- ===== RIGHT: Layered approach ===== -->
+
+  <!-- Source boxes -->
+  <rect x="840" y="144" width="160" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="920" y="182" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">A 2Mbps</text>
+
+  <rect x="1050" y="144" width="160" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="1130" y="182" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">B 2Mbps</text>
+
+  <rect x="1260" y="144" width="160" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <text x="1340" y="182" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">C 2Mbps</text>
+
+  <!-- Down arrows -->
+  <line x1="920" y1="200" x2="920" y2="230" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="1130" y1="200" x2="1130" y2="230" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="1340" y1="200" x2="1340" y2="230" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+
+  <!-- G layers -->
+  <rect x="860" y="256" width="160" height="64" fill="#f0f0f0" stroke="#dc2626" stroke-width="3" rx="8"/>
+  <text x="940" y="296" font-size="22" font-weight="bold" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">G0</text>
+
+  <rect x="1050" y="256" width="160" height="64" fill="#f0f0f0" stroke="#b8860b" stroke-width="3" rx="8"/>
+  <text x="1130" y="296" font-size="22" font-weight="bold" fill="#b8860b" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">G1</text>
+
+  <rect x="1240" y="256" width="160" height="64" fill="#f0f0f0" stroke="#16a34a" stroke-width="3" rx="8"/>
+  <text x="1320" y="296" font-size="22" font-weight="bold" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">G2</text>
+
+  <!-- Down arrow to receivers -->
+  <line x1="936" y1="324" x2="936" y2="370" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="1130" y1="324" x2="1130" y2="370" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+  <line x1="1320" y1="324" x2="1320" y2="370" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow-down)"/>
+
+  <!-- Receivers box -->
+  <rect x="820" y="390" width="600" height="196" fill="#f0f0f0" stroke="#16a34a" stroke-width="3" rx="12"/>
+
+  <!-- B receiver -->
+  <rect x="850" y="410" width="540" height="52" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="870" y="446" font-size="20" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">接收方 B: 加入 G0+G1 → 500kbps</text>
+
+  <!-- C receiver -->
+  <rect x="850" y="472" width="540" height="52" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="870" y="508" font-size="20" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">接收方 C: 加入 G0 only → 200kbps</text>
+
+  <!-- A receiver (implied - joins all) -->
+  <rect x="850" y="534" width="540" height="52" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="870" y="570" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">接收方 A: 加入 G0+G1+G2 → 全部</text>
+
+  <!-- Summary right -->
+  <rect x="840" y="610" width="560" height="56" fill="#f0f0f0" stroke="#16a34a" stroke-width="2" rx="8"/>
+  <text x="1120" y="648" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">接收方适配 → 每人"自助选择"自己的质量</text>
+
+  <!-- Bottom comparison -->
+  <rect x="80" y="700" width="1280" height="60" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="720" y="740" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Mixer: 中心化决策，替接收方决定 | 层次编码: 去中心化，接收方自己选择</text>
+</svg>

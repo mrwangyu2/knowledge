@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="620" fill="#ffffff" rx="16"/>
+  <text x="60" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="bold" fill="#1a1a1a">唇音同步算法 (接收方)</text>
+  <line x1="60" y1="76" x2="1380" y2="76" stroke="#bbbbbb" stroke-width="6"/>
+  <!-- Step 1 -->
+  <rect x="60" y="100" width="1320" height="96" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <circle cx="104" cy="148" r="24" fill="#1a3f8a" fill-opacity="0.2" stroke="#1a3f8a" stroke-width="4"/>
+  <text x="104" y="156" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#1a3f8a">1</text>
+  <text x="150" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">通过 RTCP SR 获取:</text>
+  <text x="150" y="172" font-family="monospace" font-size="24" fill="#0d6b2e">音频 RTP_TS ↔ NTP 的映射 | 视频 RTP_TS ↔ NTP 的映射</text>
+  <!-- Arrow -->
+  <line x1="720" y1="196" x2="720" y2="228" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <!-- Step 2 -->
+  <rect x="60" y="236" width="1320" height="96" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <circle cx="104" cy="284" r="24" fill="#1a3f8a" fill-opacity="0.2" stroke="#1a3f8a" stroke-width="4"/>
+  <text x="104" y="292" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#1a3f8a">2</text>
+  <text x="150" y="272" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">对每个音频帧和视频帧，计算出其 NTP 时刻:</text>
+  <text x="150" y="308" font-family="monospace" font-size="24" fill="#0d6b2e">NTP_audio = f(RTP_TS_audio) | NTP_video = f(RTP_TS_video)</text>
+  <!-- Arrow -->
+  <line x1="720" y1="332" x2="720" y2="364" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <!-- Step 3 -->
+  <rect x="60" y="372" width="1320" height="96" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <circle cx="104" cy="420" r="24" fill="#1a3f8a" fill-opacity="0.2" stroke="#1a3f8a" stroke-width="4"/>
+  <text x="104" y="428" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#1a3f8a">3</text>
+  <text x="150" y="408" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">以较慢的那个为基准，快的一方延迟播放:</text>
+  <text x="150" y="444" font-family="monospace" font-size="24" fill="#8b6508">if (NTP_video &gt; NTP_audio + tolerance): 延迟视频 | else: 延迟音频</text>
+  <!-- Arrow -->
+  <line x1="720" y1="468" x2="720" y2="500" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <!-- Step 4 -->
+  <rect x="360" y="508" width="720" height="80" fill="#0d6b2e" fill-opacity="0.15" stroke="#0d6b2e" stroke-width="6" rx="12"/>
+  <circle cx="404" cy="548" r="24" fill="#0d6b2e" fill-opacity="0.2" stroke="#0d6b2e" stroke-width="4"/>
+  <text x="404" y="556" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#0d6b2e">4</text>
+  <text x="444" y="556" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="#0d6b2e">输出: 口型 = 声音，Lip Sync 达成</text>
+</svg>

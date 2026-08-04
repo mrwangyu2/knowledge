@@ -1,0 +1,47 @@
+{
+  "name": "@aliou/pi-theme-jellybeans",
+  "version": "0.1.6",
+  "type": "module",
+  "private": false,
+  "description": "Jellybeans Mono themes for Pi in dark and light variants.",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi-theme",
+    "pi",
+    "jellybeans"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliou/pi-theme-jellybeans"
+  },
+  "pi": {
+    "themes": [
+      "./jellybeans-mono.json",
+      "./jellybeans-mono-light.json"
+    ],
+    "image": "https://assets.aliou.me/github/aliou/pi-theme-jellybeans/mono.png"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "*.json",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "typecheck": "echo 'No typecheck step for JSON-only theme package'",
+    "test": "node scripts/test-theme-json.mjs",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm changeset publish"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
+    "@changesets/cli": "^2.27.11"
+  },
+  "packageManager": "pnpm@10.26.1"
+}

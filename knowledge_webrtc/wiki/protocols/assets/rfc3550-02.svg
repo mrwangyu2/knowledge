@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520">
+  <rect width="1440" height="520" fill="#ffffff" rx="16"/>
+  <text x="60" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#555555">端口 → Session</text>
+  <text x="400" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#555555">SSRC → Stream (流)</text>
+  <rect x="80" y="84" width="1280" height="400" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="120" y="136" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="#1a3f8a">Session (224.0.0.1:5004/5005)</text>
+  <line x1="120" y1="156" x2="1320" y2="156" stroke="#bbbbbb" stroke-width="3"/>
+  <rect x="160" y="184" width="1160" height="60" fill="#ffffff" stroke="#bbbbbb" stroke-width="4" rx="8"/>
+  <text x="200" y="224" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">Stream A (SSRC=0x4A7B) ─┐</text>
+  <rect x="160" y="260" width="1160" height="60" fill="#ffffff" stroke="#bbbbbb" stroke-width="4" rx="8"/>
+  <text x="200" y="300" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">Stream B (SSRC=0xC2F1) ─┤ 同一端口收发</text>
+  <rect x="160" y="336" width="1160" height="60" fill="#ffffff" stroke="#bbbbbb" stroke-width="4" rx="8"/>
+  <text x="200" y="376" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">Stream C (SSRC=0x8E3D) ─┘</text>
+  <text x="120" y="452" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#555555">操作系统看端口 → 把包交给 RTP 层 | RTP 层读 SSRC → 分到正确的流</text>
+</svg>

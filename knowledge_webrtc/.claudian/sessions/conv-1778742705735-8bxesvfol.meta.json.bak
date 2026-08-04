@@ -1,0 +1,23 @@
+{
+  "id": "conv-1778742705735-8bxesvfol",
+  "providerId": "claude",
+  "title": "Respond to user greeting",
+  "titleGenerationStatus": "success",
+  "createdAt": 1778742705735,
+  "updatedAt": 1779419768480,
+  "lastResponseAt": 1779419768480,
+  "sessionId": "547abd83-df48-442b-98c4-4926057fca38",
+  "providerState": {
+    "providerSessionId": "547abd83-df48-442b-98c4-4926057fca38"
+  },
+  "currentNote": "mind_map/mind_webrtc-mindmap.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 146,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 135424,
+    "contextWindow": 200000,
+    "contextTokens": 135570,
+    "percentage": 68
+  }
+}

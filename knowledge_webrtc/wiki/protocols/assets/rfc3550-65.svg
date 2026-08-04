@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="680" viewBox="0 0 1440 680">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="680" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Translator vs Mixer：概念对比</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Outer comparison box -->
+  <rect x="60" y="110" width="1320" height="536" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+
+  <!-- Two column headers -->
+  <rect x="90" y="136" width="630" height="56" fill="#bbbbbb" rx="8"/>
+  <text x="404" y="174" font-size="26" font-weight="bold" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Translator（转发器）</text>
+
+  <rect x="730" y="136" width="620" height="56" fill="#bbbbbb" rx="8"/>
+  <text x="1040" y="174" font-size="26" font-weight="bold" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Mixer（混合器）</text>
+
+  <!-- Row 1: Flow -->
+  <text x="120" y="240" font-size="22" fill="#1a1a1a" font-family="monospace">S1→[Translator]→S1 保留SSRC</text>
+  <text x="770" y="240" font-size="22" fill="#1a1a1a" font-family="monospace">S1→┐</text>
+  <text x="120" y="272" font-size="22" fill="#1a1a1a" font-family="monospace">S2→[Translator]→S2 单独转发</text>
+  <text x="770" y="272" font-size="22" fill="#1a1a1a" font-family="monospace">S2→[Mixer]→S3 用自己的SSRC</text>
+  <text x="770" y="304" font-size="22" fill="#1a1a1a" font-family="monospace">S3→┘</text>
+
+  <line x1="90" y1="328" x2="1350" y2="328" stroke="#bbbbbb" stroke-width="4"/>
+
+  <!-- Row 2: SSRC -->
+  <text x="120" y="370" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">保留所有源的 SSRC</text>
+  <text x="770" y="370" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">使用自己的 SSRC</text>
+
+  <!-- Row 3: CSRC -->
+  <text x="120" y="410" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">SSRC 不变</text>
+  <text x="770" y="410" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">CSRC 列出原始源</text>
+
+  <!-- Row 4: Visibility -->
+  <text x="120" y="450" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">接收方可见各源</text>
+  <text x="770" y="450" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">接收方只看到 Mixer</text>
+
+  <!-- Row 5: Encoding -->
+  <text x="120" y="490" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">可改变编码</text>
+  <text x="770" y="490" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">可改变编码、混合多流</text>
+
+  <!-- Row 6: SR -->
+  <text x="120" y="530" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">不生成自己的 SR</text>
+  <text x="770" y="530" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">生成自己的 SR</text>
+
+  <!-- Bottom summary -->
+  <rect x="160" y="576" width="1120" height="52" fill="#bbbbbb" rx="8"/>
+  <text x="720" y="614" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Translator = 快递转运（不拆包）| Mixer = 榨汁机（多路进去，一杯出来）</text>
+
+  <!-- Bottom note -->
+  <text x="720" y="664" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Translator: N→N | Mixer: N→1 | 关键是 "谁掌控 SSRC"</text>
+</svg>

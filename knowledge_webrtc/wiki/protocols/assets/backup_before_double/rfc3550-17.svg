@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="760" fill="#ffffff" rx="16"/>
+  <!-- Title -->
+  <text x="40" y="60" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">Mixer 场景 B: 视频画廊视图 (Video Mixer / MCU)</text>
+  <!-- Three senders -->
+  <rect x="80" y="100" width="160" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="160" y="146" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">A</text>
+  <text x="160" y="196" text-anchor="middle" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">720p</text>
+  <rect x="360" y="100" width="160" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="440" y="146" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">B</text>
+  <text x="440" y="196" text-anchor="middle" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">720p</text>
+  <rect x="680" y="100" width="160" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="760" y="146" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">C</text>
+  <text x="760" y="196" text-anchor="middle" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">720p</text>
+  <!-- label -->
+  <text x="500" y="230" text-anchor="middle" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">每人 720p × 3</text>
+  <!-- Converge arrows -->
+  <line x1="160" y1="214" x2="160" y2="260" stroke="#2563eb" stroke-width="3"/>
+  <line x1="160" y1="260" x2="500" y2="290" stroke="#2563eb" stroke-width="3"/>
+  <line x1="440" y1="214" x2="440" y2="290" stroke="#2563eb" stroke-width="3"/>
+  <line x1="760" y1="214" x2="760" y2="260" stroke="#2563eb" stroke-width="3"/>
+  <line x1="760" y1="260" x2="500" y2="290" stroke="#2563eb" stroke-width="3"/>
+  <line x1="500" y1="290" x2="500" y2="320" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- MCU box -->
+  <rect x="200" y="328" width="600" height="290" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="500" y="368" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">视频 Mixer / MCU</text>
+  <text x="230" y="410" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">解码 → 缩放 → 拼接成 1080p</text>
+  <!-- Grid preview -->
+  <rect x="280" y="430" width="200" height="84" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="6"/>
+  <text x="380" y="480" text-anchor="middle" font-size="22" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">A</text>
+  <rect x="488" y="430" width="200" height="84" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="6"/>
+  <text x="588" y="480" text-anchor="middle" font-size="22" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">B</text>
+  <rect x="280" y="522" width="200" height="80" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="6"/>
+  <text x="380" y="570" text-anchor="middle" font-size="22" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">C</text>
+  <rect x="488" y="522" width="200" height="80" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="6"/>
+  <text x="588" y="570" text-anchor="middle" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">空</text>
+  <!-- Output arrow -->
+  <line x1="500" y1="618" x2="500" y2="660" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="620" y="652" font-size="22" fill="#16a34a" font-family="monospace">1 路 1080p 视频</text>
+  <!-- Receiver -->
+  <rect x="800" y="628" width="400" height="110" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="1000" y="672" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">接收方</text>
+  <text x="1000" y="710" text-anchor="middle" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">只解码 1 路视频, CSRC 告知 A/B/C</text>
+</svg>

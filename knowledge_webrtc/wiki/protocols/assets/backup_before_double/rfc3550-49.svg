@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 680">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="680" fill="#ffffff" rx="16"/>
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">重传 (NACK) vs PLC</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="3"/>
+
+  <!-- NACK column -->
+  <rect x="60" y="112" width="630" height="56" fill="#bbbbbb" rx="8"/>
+  <text x="374" y="150" font-size="26" font-weight="bold" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">重传 (NACK) — 发送方主导</text>
+
+  <rect x="720" y="112" width="660" height="56" fill="#bbbbbb" rx="8"/>
+  <text x="1050" y="150" font-size="26" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">PLC — 接收方主导</text>
+
+  <!-- Time axis line left -->
+  <line x1="280" y1="184" x2="280" y2="508" stroke="#bbbbbb" stroke-width="3"/>
+  <!-- Time axis line right -->
+  <line x1="1050" y1="184" x2="1050" y2="508" stroke="#bbbbbb" stroke-width="3"/>
+
+  <!-- NACK flow -->
+  <rect x="60" y="192" width="130" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="124" y="220" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">发送方</text>
+  <rect x="310" y="192" width="130" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="374" y="220" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">接收方</text>
+
+  <line x1="124" y1="252" x2="620" y2="252" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="372" y="244" font-size="20" fill="#555555" font-family="monospace" text-anchor="middle">[P1] OK</text>
+
+  <line x1="124" y1="296" x2="620" y2="296" stroke="#dc2626" stroke-width="3" stroke-dasharray="12,6"/>
+  <text x="372" y="288" font-size="20" fill="#dc2626" font-family="monospace" text-anchor="middle">[P2] 丢失</text>
+
+  <line x1="620" y1="336" x2="124" y2="336" stroke="#dc2626" stroke-width="3" marker-end="url(#arrow-red)"/>
+  <text x="372" y="328" font-size="20" fill="#dc2626" font-family="monospace" text-anchor="middle">NACK(P2)</text>
+
+  <line x1="124" y1="376" x2="620" y2="376" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="372" y="368" font-size="20" fill="#16a34a" font-family="monospace" text-anchor="middle">[P2] 重传</text>
+
+  <text x="372" y="420" font-size="22" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">延迟：1 RTT (40-200ms)</text>
+  <text x="372" y="456" font-size="22" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">体验：长时间停顿卡顿</text>
+
+  <!-- PLC flow -->
+  <rect x="910" y="192" width="130" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="974" y="220" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">接收方</text>
+
+  <line x1="974" y1="252" x2="1280" y2="252" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="1050" y="244" font-size="20" fill="#555555" font-family="monospace" text-anchor="middle">收到 P1</text>
+
+  <rect x="920" y="272" width="160" height="44" fill="#f0f0f0" stroke="#dc2626" stroke-width="2" rx="8"/>
+  <text x="1000" y="304" font-size="20" fill="#dc2626" font-family="monospace" text-anchor="middle">发现 seq 跳号</text>
+
+  <rect x="920" y="332" width="160" height="44" fill="#f0f0f0" stroke="#2563eb" stroke-width="2" rx="8"/>
+  <text x="1000" y="364" font-size="20" fill="#2563eb" font-family="monospace" text-anchor="middle">本地计算合成</text>
+
+  <line x1="974" y1="396" x2="1280" y2="396" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="1050" y="388" font-size="20" fill="#16a34a" font-family="monospace" text-anchor="middle">无缝播放</text>
+
+  <text x="1050" y="436" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">延迟：0ms (本地计算)</text>
+  <text x="1050" y="472" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">体验：短暂轻微失真</text>
+
+  <!-- Bottom conclusion -->
+  <rect x="60" y="530" width="1320" height="120" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <rect x="90" y="544" width="580" height="64" fill="#bbbbbb" rx="8"/>
+  <text x="380" y="586" font-size="24" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">NACK：1 RTT (40~200ms) 长时间停顿</text>
+  <rect x="700" y="544" width="650" height="64" fill="#bbbbbb" rx="8"/>
+  <text x="1024" y="586" font-size="24" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">PLC：0ms 本地计算，轻微失真</text>
+  <text x="720" y="632" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">结论：耳朵容忍 20ms 失真，绝不原谅 100ms 停顿</text>
+</svg>

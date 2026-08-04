@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="400" viewBox="0 0 1440 400">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="400" fill="#ffffff" rx="16"/>
+
+  <!-- Title bar -->
+  <rect x="40" y="32" width="1360" height="72" fill="#bbbbbb" rx="12"/>
+  <text x="720" y="78" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SSRC = 32 位随机数，标识 RTP 数据流的来源</text>
+
+  <!-- Mic box -->
+  <rect x="200" y="144" width="440" height="120" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="420" y="188" font-size="24" font-weight="bold" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">麦克风 → 音频流</text>
+  <text x="420" y="232" font-size="26" fill="#1a1a1a" font-family="monospace" text-anchor="middle">SSRC: 12345</text>
+
+  <!-- Camera box -->
+  <rect x="800" y="144" width="440" height="120" fill="#f0f0f0" stroke="#0d6b2e" stroke-width="6" rx="12"/>
+  <text x="1020" y="188" font-size="24" font-weight="bold" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">摄像头 → 视频流</text>
+  <text x="1020" y="232" font-size="26" fill="#1a1a1a" font-family="monospace" text-anchor="middle">SSRC: 67890</text>
+
+  <!-- Footer text -->
+  <rect x="120" y="300" width="1200" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="720" y="336" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">同一会话中，每个 SSRC 有独立的时间戳和序列号空间</text>
+  <text x="720" y="366" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">同一设备的多个流使用不同的 SSRC</text>
+</svg>

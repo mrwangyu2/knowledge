@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+    <marker id="arrow-small" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="720" fill="#ffffff" rx="16"/>
+
+  <!-- Title bar -->
+  <rect x="40" y="32" width="1360" height="72" fill="#bbbbbb" rx="12"/>
+  <text x="720" y="78" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">层次编码 + 接收方自适应</text>
+
+  <!-- Sender section -->
+  <text x="80" y="160" font-size="26" font-weight="bold" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif">发送方</text>
+  <line x1="80" y1="172" x2="80" y2="200" stroke="#1a3f8a" stroke-width="6"/>
+  <line x1="80" y1="200" x2="200" y2="200" stroke="#1a3f8a" stroke-width="6"/>
+
+  <!-- Layer 0 -->
+  <line x1="200" y1="200" x2="200" y2="230" stroke="#1a3f8a" stroke-width="6"/>
+  <rect x="210" y="230" width="400" height="48" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="230" y="264" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">基础层 (Layer 0) → 多播组 G0</text>
+
+  <!-- Layer 1 -->
+  <line x1="200" y1="200" x2="300" y2="200" stroke="#1a3f8a" stroke-width="6"/>
+  <line x1="300" y1="200" x2="300" y2="290" stroke="#1a3f8a" stroke-width="6"/>
+  <rect x="310" y="290" width="400" height="48" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="330" y="324" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">增强层1 (Layer 1) → 多播组 G1</text>
+
+  <!-- Layer 2 -->
+  <line x1="200" y1="200" x2="400" y2="200" stroke="#1a3f8a" stroke-width="6"/>
+  <line x1="400" y1="200" x2="400" y2="350" stroke="#1a3f8a" stroke-width="6"/>
+  <rect x="410" y="350" width="400" height="48" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="430" y="384" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">增强层2 (Layer 2) → 多播组 G2</text>
+
+  <!-- Column divider -->
+  <line x1="720" y1="110" x2="720" y2="500" stroke="#bbbbbb" stroke-width="4" stroke-dasharray="8,8"/>
+
+  <!-- Receiver section -->
+  <text x="800" y="160" font-size="26" font-weight="bold" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif">接收方</text>
+  <line x1="800" y1="172" x2="800" y2="200" stroke="#0d6b2e" stroke-width="6"/>
+  <line x1="800" y1="200" x2="920" y2="200" stroke="#0d6b2e" stroke-width="6"/>
+
+  <!-- Low bandwidth -->
+  <line x1="920" y1="200" x2="920" y2="230" stroke="#0d6b2e" stroke-width="6"/>
+  <rect x="930" y="230" width="430" height="48" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="950" y="264" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">低带宽: 只加入 G0 → 基础质量</text>
+
+  <!-- Medium bandwidth -->
+  <line x1="920" y1="200" x2="1020" y2="200" stroke="#0d6b2e" stroke-width="6"/>
+  <line x1="1020" y1="200" x2="1020" y2="290" stroke="#0d6b2e" stroke-width="6"/>
+  <rect x="1030" y="290" width="430" height="48" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="1050" y="324" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">中带宽: 加入 G0+G1 → 中等质量</text>
+
+  <!-- High bandwidth -->
+  <line x1="920" y1="200" x2="1120" y2="200" stroke="#0d6b2e" stroke-width="6"/>
+  <line x1="1120" y1="200" x2="1120" y2="350" stroke="#0d6b2e" stroke-width="6"/>
+  <rect x="1130" y="350" width="430" height="48" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="1150" y="384" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">高带宽: 加入 G0+G1+G2 → 最高质量</text>
+
+  <!-- Layer quality notes below sender -->
+  <text x="240" y="430" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">最低质量, 最低带宽</text>
+  <text x="240" y="490" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">中等质量</text>
+  <text x="240" y="550" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">最高质量</text>
+
+  <!-- Core principle box -->
+  <rect x="160" y="600" width="1120" height="80" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="720" y="650" font-size="24" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">核心: 接收方自主决定收多少层，而非发送方降到最低公共质量</text>
+</svg>

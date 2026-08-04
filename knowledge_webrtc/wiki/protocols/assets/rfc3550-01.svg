@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="540" viewBox="0 0 1440 540">
+  <rect width="1440" height="540" fill="#ffffff" rx="16"/>
+  <text x="720" y="56" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="bold" fill="#1a1a1a">RTP 协议体系架构</text>
+  <line x1="60" y1="80" x2="1380" y2="80" stroke="#bbbbbb" stroke-width="6"/>
+  <rect x="120" y="116" width="1200" height="160" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="160" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="#1a3f8a">RTP (Real-time Transport Protocol)</text>
+  <text x="160" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">- 传输音视频数据</text>
+  <text x="160" y="248" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">- 提供序列号、时间戳、源标识</text>
+  <rect x="120" y="310" width="1200" height="190" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="160" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="#1a3f8a">RTCP (RTP Control Protocol)</text>
+  <text x="160" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">- 监控传输质量 (丢包、抖动、延迟)</text>
+  <text x="160" y="442" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">- 源标识 (CNAME)</text>
+  <text x="160" y="482" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">- 会话成员管理</text>
+</svg>

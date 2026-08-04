@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="520" fill="#ffffff" rx="16"/>
+  <!-- Title -->
+  <text x="40" y="60" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">场景 A: WebRTC SFU (Selective Forwarding Unit) — Translator 最典型应用</text>
+  <!-- Three participants -->
+  <rect x="40" y="100" width="260" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="170" y="138" text-anchor="middle" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">A (北京)</text>
+  <rect x="40" y="164" width="260" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="170" y="202" text-anchor="middle" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">B (上海)</text>
+  <rect x="40" y="228" width="260" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="170" y="266" text-anchor="middle" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">C (深圳)</text>
+  <!-- Arrows to SFU -->
+  <line x1="300" y1="128" x2="420" y2="128" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="300" y1="192" x2="420" y2="192" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="300" y1="256" x2="420" y2="256" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <!-- SFU box -->
+  <rect x="430" y="90" width="440" height="210" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="650" y="134" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">SFU (Translator)</text>
+  <text x="650" y="170" text-anchor="middle" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">不混合！只做选择性转发</text>
+  <text x="460" y="210" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">1. 查路由表: "B 的包发给 A 和 C"</text>
+  <text x="460" y="240" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">2. 原样转发 → 不改 SSRC/编码/序列号</text>
+  <text x="460" y="270" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">3. 可选: Simulcast 选层 (C 网差 → 只转 360p)</text>
+  <!-- Arrows from SFU to receivers -->
+  <line x1="870" y1="140" x2="1000" y2="140" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="870" y1="180" x2="1000" y2="180" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="870" y1="220" x2="1000" y2="220" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <text x="940" y="120" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">A 收 B/C</text>
+  <text x="940" y="160" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">B 收 A/C</text>
+  <text x="940" y="200" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">C 收 A/B</text>
+  <!-- Receiver notes -->
+  <rect x="1010" y="100" width="396" height="110" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="1208" y="136" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">接收方 A 的效果</text>
+  <text x="1030" y="168" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">• 看到两个独立 SSRC (B, C)</text>
+  <text x="1030" y="194" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">• 分别统计 B/C 丢包率/抖动</text>
+  <!-- Bottom note -->
+  <rect x="40" y="340" width="1360" height="140" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="720" y="390" text-anchor="middle" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">SFU = Translator 思路的现代继承</text>
+  <text x="720" y="430" text-anchor="middle" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">从 RFC 3550 的"多播隧道 Translator"到 WebRTC 的 SFU，核心不变：只做路由，不改内容。</text>
+  <text x="720" y="464" text-anchor="middle" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">接收方对发送方的感知完全透明。</text>
+</svg>

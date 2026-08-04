@@ -1,0 +1,23 @@
+{
+  "id": "conv-1776927372951-qm0uamaim",
+  "providerId": "claude",
+  "title": "Ask about Claude model version",
+  "titleGenerationStatus": "success",
+  "createdAt": 1776927372954,
+  "updatedAt": 1778028648206,
+  "lastResponseAt": 1778028648206,
+  "sessionId": "e7607877-2ec8-417a-acc1-60da5f86e5bb",
+  "providerState": {
+    "providerSessionId": "e7607877-2ec8-417a-acc1-60da5f86e5bb"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 40282,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 40282,
+    "percentage": 20,
+    "contextWindowIsAuthoritative": true
+  }
+}

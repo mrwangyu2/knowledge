@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="560" fill="#ffffff" rx="16"/>
+  <!-- Title -->
+  <text x="40" y="60" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">层次编码 — 生活类比: 群聊发照片</text>
+  <!-- Sender -->
+  <rect x="520" y="96" width="400" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="720" y="136" text-anchor="middle" font-size="26" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">你: 一张 20MB 4K 超清照片</text>
+  <!-- Three rounds -->
+  <rect x="40" y="188" width="420" height="110" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="250" y="224" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">第 1 轮: 基础版 (50KB)</text>
+  <text x="250" y="260" text-anchor="middle" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">清晰度 30% → 人人都能秒看</text>
+  <text x="250" y="290" text-anchor="middle" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">Alice · Bob · Carol ✓</text>
+  <rect x="500" y="188" width="420" height="110" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="710" y="224" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">第 2 轮: 补充细节 (+150KB)</text>
+  <text x="710" y="260" text-anchor="middle" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">叠加后清晰度 70%</text>
+  <text x="710" y="290" text-anchor="middle" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">Alice · Bob ✓ | Carol ✗</text>
+  <rect x="960" y="188" width="440" height="110" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="1180" y="224" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">第 3 轮: 最终细节 (+500KB)</text>
+  <text x="1180" y="260" text-anchor="middle" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">叠加后清晰度 100%</text>
+  <text x="1180" y="290" text-anchor="middle" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">Alice ✓ | Bob ✗ | Carol ✗</text>
+  <!-- Results -->
+  <rect x="40" y="330" width="430" height="100" fill="#f0f0f0" stroke="#16a34a" stroke-width="3" rx="12"/>
+  <text x="254" y="374" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">Carol (山区 2G)</text>
+  <text x="254" y="410" text-anchor="middle" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">只收第 1 轮 → 模糊但能看</text>
+  <rect x="500" y="330" width="420" height="100" fill="#f0f0f0" stroke="#16a34a" stroke-width="3" rx="12"/>
+  <text x="710" y="374" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">Bob (地铁 4G)</text>
+  <text x="710" y="410" text-anchor="middle" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">收前两轮 → 基本清晰</text>
+  <rect x="960" y="330" width="440" height="100" fill="#f0f0f0" stroke="#16a34a" stroke-width="3" rx="12"/>
+  <text x="1180" y="374" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">Alice (公司 WiFi)</text>
+  <text x="1180" y="410" text-anchor="middle" font-size="22" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">全收 → 完美画质 100%</text>
+  <!-- Bottom insight -->
+  <rect x="160" y="460" width="1120" height="70" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="720" y="506" text-anchor="middle" font-size="22" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">层次编码 = "基础版 + 升级包" → 接收方自主决定收几层 → 各取所需，不互相拖累</text>
+</svg>

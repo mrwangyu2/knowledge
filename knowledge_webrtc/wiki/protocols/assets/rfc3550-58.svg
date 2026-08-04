@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="560" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">场景 B: 协议转换 Translator（IP/UDP ↔ ST-II）</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Zone labels -->
+  <text x="200" y="124" font-size="26" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">一组 IP/UDP/RTP 主机</text>
+  <text x="1120" y="124" font-size="26" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">一组 ST-II 旧设备</text>
+
+  <!-- Left group: IP/UDP/RTP hosts -->
+  <rect x="50" y="144" width="460" height="250" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <rect x="90" y="164" width="380" height="60" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="8"/>
+  <text x="280" y="204" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">A —— RTP 包 ——┐</text>
+
+  <rect x="90" y="236" width="380" height="60" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="8"/>
+  <text x="280" y="276" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">B —— RTP 包 ——┤</text>
+
+  <rect x="90" y="308" width="380" height="60" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="8"/>
+  <text x="280" y="348" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">C —— RTP 包 ——┘</text>
+
+  <!-- Right group: ST-II devices -->
+  <rect x="880" y="144" width="510" height="250" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <rect x="920" y="190" width="160" height="60" fill="#f0f0f0" stroke="#0d6b2e" stroke-width="6" rx="8"/>
+  <text x="1000" y="230" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">D</text>
+
+  <rect x="920" y="290" width="160" height="60" fill="#f0f0f0" stroke="#0d6b2e" stroke-width="6" rx="8"/>
+  <text x="1000" y="330" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">E</text>
+
+  <!-- Center: Translator box -->
+  <rect x="530" y="144" width="330" height="270" fill="#f0f0f0" stroke="#991b1b" stroke-width="8" rx="12"/>
+  <text x="694" y="190" font-size="26" font-weight="bold" fill="#991b1b" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Translator</text>
+  <text x="694" y="236" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">IP/UDP ↔ ST-II</text>
+  <line x1="560" y1="256" x2="830" y2="256" stroke="#bbbbbb" stroke-width="2"/>
+  <text x="694" y="296" font-size="22" fill="#555555" font-family="monospace" text-anchor="middle">SSRC 在两边不变</text>
+  <text x="694" y="336" font-size="22" fill="#555555" font-family="monospace" text-anchor="middle">只换传输层"信封"</text>
+
+  <!-- Arrow: IP/UDP → Translator -->
+  <line x1="510" y1="260" x2="530" y2="260" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: Translator → ST-II -->
+  <line x1="860" y1="260" x2="880" y2="260" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <!-- Bottom annotation -->
+  <text x="720" y="470" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SSRC 不变，仅更换传输层协议"信封"，接收方对原始发送方完全透明</text>
+  <text x="720" y="520" font-size="22" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">IP/UDP 组 ↔ ST-II 组，数据跨协议无缝桥接</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "id": "conv-1779788737854-ze4fzb8b4",
+  "providerId": "claude",
+  "title": "Implement SVG size doubling plan",
+  "titleGenerationStatus": "success",
+  "createdAt": 1779788737854,
+  "updatedAt": 1779847234157,
+  "lastResponseAt": 1779847217741,
+  "sessionId": "44ad1168-c01e-4d02-b620-f0cceece4b1f",
+  "providerState": {
+    "providerSessionId": "44ad1168-c01e-4d02-b620-f0cceece4b1f"
+  },
+  "usage": {
+    "model": "opus",
+    "inputTokens": 511,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 91904,
+    "contextWindow": 200000,
+    "contextTokens": 92415,
+    "percentage": 46
+  }
+}

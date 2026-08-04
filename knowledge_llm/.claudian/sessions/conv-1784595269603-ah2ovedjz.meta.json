@@ -1,0 +1,24 @@
+{
+  "id": "conv-1784595269603-ah2ovedjz",
+  "providerId": "claude",
+  "title": "确认在线状态",
+  "titleGenerationStatus": "success",
+  "createdAt": 1784595269605,
+  "updatedAt": 1785807622228,
+  "lastResponseAt": 1784602589023,
+  "sessionId": "622d28bb-6113-4744-b1b2-693cc7675aed",
+  "selectedModel": "sonnet",
+  "providerState": {
+    "providerSessionId": "622d28bb-6113-4744-b1b2-693cc7675aed"
+  },
+  "usage": {
+    "model": "sonnet",
+    "inputTokens": 18,
+    "cacheCreationInputTokens": 534,
+    "cacheReadInputTokens": 130440,
+    "contextWindow": 1000000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 130992,
+    "percentage": 13
+  }
+}

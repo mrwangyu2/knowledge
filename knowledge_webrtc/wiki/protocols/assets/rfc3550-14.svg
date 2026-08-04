@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="460" viewBox="0 0 1440 460">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="460" fill="#ffffff" rx="16"/>
+  <text x="60" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="#991b1b">问题: 低速链路无法承载多路流</text>
+  <!-- Scenario description -->
+  <text x="60" y="104" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a1a1a">A、B、C 在高带宽局域网，D 通过 28kbps 卫星链路接入</text>
+  <line x1="60" y1="124" x2="1380" y2="124" stroke="#bbbbbb" stroke-width="3"/>
+  <!-- 3 streams to D -->
+  <rect x="60" y="144" width="320" height="72" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="220" y="190" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a3f8a">A → 64kbps PCMU</text>
+  <rect x="420" y="144" width="320" height="72" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="580" y="190" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a3f8a">B → 64kbps PCMU</text>
+  <rect x="780" y="144" width="320" height="72" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="940" y="190" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="26" fill="#1a3f8a">C → 64kbps PCMU</text>
+  <!-- Merging arrows -->
+  <line x1="220" y1="216" x2="220" y2="260" stroke="#1a3f8a" stroke-width="4.8"/>
+  <line x1="580" y1="216" x2="580" y2="260" stroke="#1a3f8a" stroke-width="4.8"/>
+  <line x1="940" y1="216" x2="940" y2="260" stroke="#1a3f8a" stroke-width="4.8"/>
+  <line x1="220" y1="260" x2="940" y2="260" stroke="#1a3f8a" stroke-width="4.8"/>
+  <line x1="580" y1="260" x2="580" y2="296" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+  <!-- D receives -->
+  <rect x="380" y="304" width="400" height="100" fill="#f0f0f0" stroke="#991b1b" stroke-width="6" rx="12"/>
+  <text x="580" y="344" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="bold" fill="#991b1b">D 需收 192kbps</text>
+  <text x="580" y="384" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#1a1a1a">链路仅 28kbps → 不可行</text>
+  <!-- Summary -->
+  <rect x="140" y="420" width="1160" height="28" fill="#ffffff" rx="4"/>
+  <text x="720" y="440" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#555555">即使 A、B、C 不是同时说话，D 仍然加入三个多播组，至少需要维护三条流的接收状态</text>
+</svg>

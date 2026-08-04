@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
+  <rect width="1440" height="240" fill="#ffffff" rx="16"/>
+  <text x="60" y="56" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="bold" fill="#dc2626">问题: 音视频时间基准不同</text>
+  <rect x="60" y="84" width="590" height="116" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="100" y="128" font-family="monospace" font-size="24" fill="#16a34a">音频: 采样率 8000Hz</text>
+  <text x="100" y="168" font-family="monospace" font-size="24" fill="#16a34a">每 20ms 时间戳增量 = 160</text>
+  <rect x="690" y="84" width="690" height="116" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="730" y="128" font-family="monospace" font-size="24" fill="#16a34a">视频: 采样率 90000Hz</text>
+  <text x="730" y="168" font-family="monospace" font-size="24" fill="#16a34a">每 33ms (30fps) 时间戳增量 = 3000</text>
+</svg>

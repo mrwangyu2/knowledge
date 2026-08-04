@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="520" fill="#ffffff" rx="16"/>
+  <!-- Title -->
+  <text x="40" y="60" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">RTP 层次编码: 技术实现</text>
+  <!-- Sender -->
+  <rect x="520" y="92" width="400" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="720" y="132" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">发送方 (千兆光纤)</text>
+  <!-- Layer 0 -->
+  <line x1="720" y1="152" x2="720" y2="180" stroke="#1a3f8a" stroke-width="6"/>
+  <rect x="40" y="180" width="1360" height="70" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="70" y="212" font-size="24" fill="#0d6b2e" font-family="monospace">第 0 层 (基础层, 360p, 200kbps) → 多播 224.0.0.1</text>
+  <text x="1200" y="212" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">"所有人都得收，保底"</text>
+  <!-- Layer 1 -->
+  <line x1="720" y1="250" x2="720" y2="270" stroke="#1a3f8a" stroke-width="6"/>
+  <rect x="40" y="270" width="1360" height="70" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="70" y="302" font-size="24" fill="#0d6b2e" font-family="monospace">第 1 层 (增强层, +500kbps) → 多播 224.0.0.2</text>
+  <text x="1200" y="302" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">"网还可以的收这个 → 720p"</text>
+  <!-- Layer 2 -->
+  <line x1="720" y1="340" x2="720" y2="360" stroke="#1a3f8a" stroke-width="6"/>
+  <rect x="40" y="360" width="1360" height="70" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="70" y="392" font-size="24" fill="#0d6b2e" font-family="monospace">第 2 层 (增强层, +800kbps) → 多播 224.0.0.3</text>
+  <text x="1200" y="392" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">"网很好的收这个 → 1080p"</text>
+  <!-- Receiver section -->
+  <rect x="40" y="450" width="1360" height="50" fill="#ffffff" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="60" y="484" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">接收方: 网速好 → 加入 3 个多播地址 | 网速一般 → 加入 2 个 | 网速差 → 加入 1 个 (无需与发送方协商)</text>
+</svg>

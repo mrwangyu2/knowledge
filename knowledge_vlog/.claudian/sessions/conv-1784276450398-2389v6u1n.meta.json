@@ -1,0 +1,24 @@
+{
+  "id": "conv-1784276450398-2389v6u1n",
+  "providerId": "claude",
+  "title": "Greeting check",
+  "titleGenerationStatus": "success",
+  "createdAt": 1784276450399,
+  "updatedAt": 1784692981836,
+  "lastResponseAt": 1784282767756,
+  "sessionId": "ed701b9e-d61e-4694-93c1-93a5ebb102ba",
+  "selectedModel": "haiku",
+  "providerState": {
+    "providerSessionId": "ed701b9e-d61e-4694-93c1-93a5ebb102ba"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 39,
+    "cacheCreationInputTokens": 13160,
+    "cacheReadInputTokens": 71685,
+    "contextWindow": 200000,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 84884,
+    "percentage": 42
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 540">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="540" fill="#ffffff" rx="16"/>
+  <text x="720" y="50" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="bold" fill="#1a1a1a">NTP 时间戳 = 音视频的共同参考时钟</text>
+  <line x1="60" y1="72" x2="1380" y2="72" stroke="#bbbbbb" stroke-width="3"/>
+  <!-- Audio SR -->
+  <rect x="80" y="100" width="600" height="110" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="110" y="144" font-family="monospace" font-size="24" fill="#2563eb">RTCP SR (音频):</text>
+  <text x="110" y="180" font-family="monospace" font-size="22" fill="#16a34a">NTP ts = 0x83AA...1234 (16:30:00.500)</text>
+  <text x="110" y="208" font-family="monospace" font-size="22" fill="#16a34a">RTP ts = 160 (音频 TS)</text>
+  <!-- Video SR -->
+  <rect x="740" y="100" width="600" height="110" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="770" y="144" font-family="monospace" font-size="24" fill="#2563eb">RTCP SR (视频):</text>
+  <text x="770" y="180" font-family="monospace" font-size="22" fill="#16a34a">NTP ts = 0x83AA...1234 (16:30:00.500)</text>
+  <text x="770" y="208" font-family="monospace" font-size="22" fill="#16a34a">RTP ts = 3000 (视频 TS)</text>
+  <!-- Arrow connecting -->
+  <line x1="680" y1="154" x2="740" y2="154" stroke="#2563eb" stroke-width="3" stroke-dasharray="8,6" marker-end="url(#arrow)"/>
+  <text x="710" y="144" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#b8860b">NTP</text>
+  <text x="710" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#b8860b">相同</text>
+  <!-- Result -->
+  <rect x="80" y="240" width="1280" height="140" fill="#ffffff" stroke="#16a34a" stroke-width="3" rx="12"/>
+  <text x="120" y="284" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="bold" fill="#16a34a">接收方获得映射:</text>
+  <text x="120" y="324" font-family="monospace" font-size="24" fill="#1a1a1a">音频 ts=160 ↔ NTP 16:30:00.500 ↔ 视频 ts=3000</text>
+  <text x="120" y="360" font-family="monospace" font-size="24" fill="#1a1a1a">音频 ts=320 → 线性推算 → 视频 ts=6000</text>
+  <!-- Bottom text -->
+  <rect x="80" y="410" width="1280" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="720" y="450" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#2563eb">→ 两个独立时间轴通过 NTP 建立统一换算关系</text>
+</svg>

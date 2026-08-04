@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="560" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">RTCP 发送间隔计算</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="3"/>
+
+  <!-- Outer box -->
+  <rect x="60" y="110" width="1320" height="424" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+
+  <!-- Code block: bandwidth allocation -->
+  <text x="120" y="160" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">带宽分配逻辑</text>
+
+  <rect x="120" y="180" width="1220" height="124" fill="#ffffff" rx="8"/>
+  <text x="156" y="216" font-size="22" fill="#16a34a" font-family="monospace">if (senders &lt;= 25% of members):</text>
+  <text x="196" y="248" font-size="22" fill="#1a1a1a" font-family="monospace">发送方: C = avg_rtcp_size / (25% x rtcp_bw)</text>
+  <text x="196" y="280" font-size="22" fill="#1a1a1a" font-family="monospace">非发送方: C = avg_rtcp_size / (75% x rtcp_bw)</text>
+  <text x="156" y="260" font-size="22" fill="#16a34a" font-family="monospace">else:</text>
+  <text x="156" y="296" font-size="22" fill="#16a34a" font-family="monospace">else:</text>
+  <text x="196" y="260" font-size="22" fill="#1a1a1a" font-family="monospace">C = avg_rtcp_size / rtcp_bw (统一处理)</text>
+
+  <text x="120" y="340" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">间隔计算公式</text>
+
+  <rect x="120" y="360" width="1220" height="152" fill="#ffffff" rx="8"/>
+  <text x="156" y="396" font-size="22" fill="#1a1a1a" font-family="monospace">Tmin = 2.5s (首次) 或 5s (已有参与者)</text>
+  <text x="156" y="430" font-size="22" fill="#1a1a1a" font-family="monospace">Td = max(Tmin, n x C)</text>
+  <text x="156" y="464" font-size="22" fill="#1a1a1a" font-family="monospace">T = random(0.5 x Td, 1.5 x Td)</text>
+  <text x="156" y="498" font-size="22" fill="#1a1a1a" font-family="monospace">T = T / 1.21828  (补偿重收敛)</text>
+
+  <!-- Annotation -->
+  <text x="720" y="550" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">间隔随成员数线性增长，随机抖动避免同步，支持 timer reconsideration 防风暴</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="500" viewBox="0 0 1440 500">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="500" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="64" text-anchor="middle" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">同一个人的三个流</text>
+
+  <!-- Main box -->
+  <rect x="280" y="104" width="880" height="260" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+
+  <!-- CNAME header row -->
+  <line x1="292" y1="164" x2="1148" y2="164" stroke="#bbbbbb" stroke-width="6"/>
+  <text x="720" y="144" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a3f8a" font-family="monospace">CNAME = "alice@pc1"</text>
+
+  <!-- Stream rows -->
+  <text x="340" y="210" text-anchor="start" font-size="26" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">音频流: SSRC=A1</text>
+  <text x="340" y="266" text-anchor="start" font-size="26" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">视频流: SSRC=A2</text>
+  <text x="340" y="322" text-anchor="start" font-size="26" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">屏幕共享: SSRC=A3</text>
+
+  <!-- Annotations -->
+  <text x="960" y="266" text-anchor="start" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">SSRC 不同，随时会变</text>
+  <text x="960" y="144" text-anchor="start" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">不变的身份</text>
+
+  <!-- Bottom explanation text -->
+  <text x="720" y="420" text-anchor="middle" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif">接收方看到三个不同的 SSRC，但它们的 SDES 包里都写着</text>
+  <text x="720" y="460" text-anchor="middle" font-size="26" font-weight="bold" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif">CNAME="alice@pc1"  →  瞬间知道：这三个流是 Alice 一个人的</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="400" viewBox="0 0 1440 400">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="400" fill="#ffffff" rx="16"/>
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">级联 Mixer 中的 CSRC 传播</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Mixer1 output -->
+  <rect x="200" y="116" width="1040" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="720" y="156" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">Mixer1 输出: SSRC=M1, CSRC=[A, B]</text>
+
+  <!-- Arrow down -->
+  <line x1="720" y1="180" x2="720" y2="230" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <!-- Mixer2 process -->
+  <rect x="440" y="230" width="560" height="48" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="720" y="264" font-size="22" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Mixer2 再混合</text>
+
+  <!-- Arrow down -->
+  <line x1="720" y1="282" x2="720" y2="320" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <!-- Mixer2 output -->
+  <rect x="160" y="320" width="1120" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="720" y="360" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">Mixer2 输出: SSRC=M2, CSRC=[A, B, C]</text>
+</svg>

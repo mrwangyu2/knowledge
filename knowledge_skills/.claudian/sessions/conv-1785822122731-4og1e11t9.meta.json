@@ -1,0 +1,24 @@
+{
+  "id": "conv-1785822122731-4og1e11t9",
+  "providerId": "claude",
+  "title": "Check agent availability",
+  "titleGenerationStatus": "success",
+  "createdAt": 1785822122735,
+  "updatedAt": 1785826443394,
+  "lastResponseAt": 1785826443394,
+  "sessionId": "ddb97301-3e42-42f4-be0a-86f5293d394c",
+  "selectedModel": "opus",
+  "providerState": {
+    "providerSessionId": "ddb97301-3e42-42f4-be0a-86f5293d394c"
+  },
+  "currentNote": "mattpocock-skills.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 65519,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 1000000,
+    "contextTokens": 65519,
+    "percentage": 7
+  }
+}

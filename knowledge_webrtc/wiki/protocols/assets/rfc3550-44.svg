@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="360" viewBox="0 0 1440 360">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="360" fill="#ffffff" rx="16"/>
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">RTP 头开销分析</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Header breakdown -->
+  <rect x="80" y="112" width="1280" height="72" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="720" y="156" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">RTP 头开销:  序列号 16bit  +  时间戳 32bit  =  6 字节</text>
+
+  <!-- Audio example -->
+  <rect x="80" y="210" width="600" height="96" fill="#f0f0f0" stroke="#991b1b" stroke-width="6" rx="12"/>
+  <text x="380" y="250" font-size="24" fill="#991b1b" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">典型音频包 (20ms PCMU)</text>
+  <text x="380" y="288" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">160 字节负载 → 开销 3.6%</text>
+
+  <!-- Video example -->
+  <rect x="720" y="210" width="640" height="96" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="1040" y="250" font-size="24" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">典型视频包 (MTU)</text>
+  <text x="1040" y="288" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">~1200 字节负载 → 开销 0.5%</text>
+
+  <!-- Bottom summary -->
+  <text x="720" y="344" font-size="22" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">6 字节换来：丢包检测 + 精确播放时刻 + 乱序恢复 + 跨媒体同步 + 各自独立容错</text>
+</svg>

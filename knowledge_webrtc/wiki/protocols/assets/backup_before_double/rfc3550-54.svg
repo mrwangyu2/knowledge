@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 840">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="840" fill="#ffffff" rx="16"/>
+  <text x="720" y="48" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SR (Sender Report) 包格式 — PT=200</text>
+  <line x1="40" y1="76" x2="1400" y2="76" stroke="#bbbbbb" stroke-width="3"/>
+
+  <!-- Bit labels -->
+  <text x="720" y="108" font-size="18" fill="#555555" font-family="monospace" text-anchor="middle">0                   1                   2                   3</text>
+  <text x="720" y="128" font-size="18" fill="#555555" font-family="monospace" text-anchor="middle">0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1</text>
+
+  <!-- Row 1: Header -->
+  <rect x="60" y="144" width="1320" height="68" fill="#bbbbbb" stroke="#bbbbbb" stroke-width="3" rx="8"/>
+  <rect x="70" y="152" width="160" height="52" fill="#f0f0f0" rx="6"/>
+  <text x="150" y="188" font-size="20" fill="#dc2626" font-family="monospace" text-anchor="middle">V=2|P|RC</text>
+  <rect x="240" y="152" width="240" height="52" fill="#f0f0f0" rx="6"/>
+  <text x="360" y="188" font-size="20" fill="#2563eb" font-family="monospace" text-anchor="middle">PT=SR=200</text>
+  <rect x="490" y="152" width="320" height="52" fill="#f0f0f0" rx="6"/>
+  <text x="650" y="188" font-size="20" fill="#16a34a" font-family="monospace" text-anchor="middle">length</text>
+  <text x="1260" y="188" font-size="18" fill="#555555" font-family="system-ui, -apple-system, sans-serif">头 (8 bytes)</text>
+
+  <!-- Row 2: SSRC -->
+  <rect x="60" y="220" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="248" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">SSRC of sender (32 bits)</text>
+
+  <!-- Row 3: NTP MSW -->
+  <rect x="60" y="268" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="296" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">NTP timestamp, most significant word (32 bits)</text>
+  <text x="1260" y="296" font-size="18" fill="#555555" font-family="system-ui, -apple-system, sans-serif">发送方信息</text>
+
+  <!-- Row 4: NTP LSW -->
+  <rect x="60" y="316" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="344" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">NTP timestamp, least significant word (32 bits)</text>
+  <text x="1260" y="344" font-size="18" fill="#555555" font-family="system-ui, -apple-system, sans-serif">(20 bytes)</text>
+
+  <!-- Row 5: RTP TS -->
+  <rect x="60" y="364" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="392" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">RTP timestamp (32 bits)</text>
+
+  <!-- Row 6: Packet count -->
+  <rect x="60" y="412" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="440" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">sender's packet count (32 bits)</text>
+
+  <!-- Row 7: Octet count -->
+  <rect x="60" y="460" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="488" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">sender's octet count (32 bits)</text>
+
+  <!-- Separator -->
+  <line x1="60" y1="510" x2="1380" y2="510" stroke="#2563eb" stroke-width="2" stroke-dasharray="8,8"/>
+
+  <!-- Row 8: SSRC_1 -->
+  <rect x="60" y="520" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="548" font-size="20" fill="#2563eb" font-family="monospace" text-anchor="middle">SSRC_1 (SSRC of first source) (32 bits)</text>
+  <text x="1260" y="548" font-size="18" fill="#555555" font-family="system-ui, -apple-system, sans-serif">报告块 1</text>
+
+  <!-- Row 9: Fraction + cumulative -->
+  <rect x="60" y="568" width="1320" height="48" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <rect x="70" y="574" width="400" height="36" fill="#bbbbbb" rx="6"/>
+  <text x="270" y="602" font-size="18" fill="#1a1a1a" font-family="monospace" text-anchor="middle">fraction lost (8)</text>
+  <rect x="480" y="574" width="890" height="36" fill="#bbbbbb" rx="6"/>
+  <text x="924" y="602" font-size="18" fill="#1a1a1a" font-family="monospace" text-anchor="middle">cumulative number of packets lost (24 bits)</text>
+  <text x="1260" y="602" font-size="18" fill="#555555" font-family="system-ui, -apple-system, sans-serif">(24 bytes)</text>
+
+  <!-- Row 10: Extended highest seq -->
+  <rect x="60" y="624" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="652" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">extended highest sequence number received (32 bits)</text>
+
+  <!-- Row 11: Jitter -->
+  <rect x="60" y="672" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="700" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">interarrival jitter (32 bits)</text>
+
+  <!-- Row 12: LSR -->
+  <rect x="60" y="720" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="748" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">last SR (LSR) (32 bits)</text>
+
+  <!-- Row 13: DLSR -->
+  <rect x="60" y="768" width="1320" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="0"/>
+  <text x="720" y="796" font-size="20" fill="#1a1a1a" font-family="monospace" text-anchor="middle">delay since last SR (DLSR) (32 bits)</text>
+
+  <!-- Note -->
+  <text x="720" y="832" font-size="18" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">结构：头(8) + 发送方信息(20) + 多个报告块(每块 24 字节)，RC 字段指定报告块数量</text>
+</svg>

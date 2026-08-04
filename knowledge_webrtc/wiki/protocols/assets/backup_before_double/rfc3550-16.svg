@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 680">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="680" fill="#ffffff" rx="16"/>
+  <!-- Title -->
+  <text x="40" y="60" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">Mixer 场景 A: 多人语音会议 (腾讯会议/Zoom 音频混合)</text>
+  <!-- Phone -->
+  <rect x="520" y="100" width="400" height="110" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="720" y="144" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">你的手机</text>
+  <text x="720" y="184" text-anchor="middle" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">4G 弱网, 下行 ~500kbps</text>
+  <!-- Annotation: if no Mixer -->
+  <line x1="720" y1="210" x2="720" y2="240" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="400" y="248" width="640" height="110" fill="#f0f0f0" stroke="#dc2626" stroke-width="3" rx="12" stroke-dasharray="8"/>
+  <text x="720" y="288" text-anchor="middle" font-size="22" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif">如果不用 Mixer:</text>
+  <text x="720" y="320" text-anchor="middle" font-size="22" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif">收 9 路独立音频流 × 32kbps = 288kbps + 状态维护</text>
+  <text x="720" y="348" text-anchor="middle" font-size="22" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif">→ 手机发烫、耗电快、弱网丢包严重</text>
+  <!-- Arrow down -->
+  <line x1="720" y1="358" x2="720" y2="394" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Mixer box -->
+  <rect x="320" y="400" width="800" height="180" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="720" y="440" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">会议服务器 Mixer</text>
+  <text x="350" y="480" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">1. 解码 A~I 的 9 路音频流</text>
+  <text x="350" y="512" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">2. PCM 域混合 → 1 路音频</text>
+  <text x="350" y="544" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">3. 重新 Opus 编码 (32kbps)</text>
+  <text x="350" y="576" font-size="22" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">4. 发包: SSRC=Mixer_ID, CSRC=[正在说话的 A, B, C]</text>
+  <!-- Arrow down -->
+  <line x1="720" y1="580" x2="720" y2="620" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="840" y="610" font-size="22" fill="#16a34a" font-family="monospace">1 路 32kbps</text>
+  <!-- Phone result -->
+  <rect x="520" y="628" width="400" height="40" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="720" y="656" text-anchor="middle" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">只维护 1 个 SSRC, 界面显示说话者</text>
+</svg>

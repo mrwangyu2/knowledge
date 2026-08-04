@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 740">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="740" fill="#ffffff" rx="16"/>
+
+  <!-- Left column: 不分层 -->
+  <rect x="40" y="30" width="670" height="330" fill="#f0f0f0" stroke="#dc2626" stroke-width="4" rx="12"/>
+  <text x="374" y="84" text-anchor="middle" font-size="30" font-weight="bold" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif">❌ 不分层（最低公共质量）</text>
+  <line x1="70" y1="104" x2="680" y2="104" stroke="#bbbbbb" stroke-width="2"/>
+
+  <text x="70" y="150" font-size="26" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">发送方想：</text>
+  <text x="90" y="192" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif">"Carol 只有 300kbps，</text>
+  <text x="90" y="230" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif"> 那我只能发 360p"</text>
+
+  <text x="70" y="284" font-size="26" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif">→ Alice、Bob 只能看 360p</text>
+  <text x="70" y="326" font-size="24" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif">→ 所有人都被最差的网络拖下水</text>
+
+  <!-- Right column: 分层 -->
+  <rect x="730" y="30" width="670" height="330" fill="#f0f0f0" stroke="#16a34a" stroke-width="4" rx="12"/>
+  <text x="1064" y="84" text-anchor="middle" font-size="30" font-weight="bold" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">✅ 分层方案</text>
+  <line x1="760" y1="104" x2="1370" y2="104" stroke="#bbbbbb" stroke-width="2"/>
+
+  <text x="760" y="150" font-size="26" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">发送方："我同时发 3 层，自己看着办"</text>
+
+  <rect x="760" y="180" width="610" height="156" fill="#ffffff" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+  <text x="790" y="224" font-size="24" fill="#b8860b" font-family="system-ui, -apple-system, sans-serif">Carol</text>
+  <text x="920" y="224" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif">300kbps → 只收第0层</text>
+  <text x="1140" y="224" font-size="24" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">360p 🟢</text>
+
+  <text x="790" y="264" font-size="24" fill="#b8860b" font-family="system-ui, -apple-system, sans-serif">Bob</text>
+  <text x="920" y="264" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif">1Mbps → 收第0+1层</text>
+  <text x="1140" y="264" font-size="24" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">720p 🟢</text>
+
+  <text x="790" y="304" font-size="24" fill="#b8860b" font-family="system-ui, -apple-system, sans-serif">Alice</text>
+  <text x="920" y="304" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif">5Mbps → 全收</text>
+  <text x="1140" y="304" font-size="24" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">1080p 🟢</text>
+
+  <!-- Bottom section: 对比结论 -->
+  <rect x="40" y="390" width="1360" height="300" fill="#f0f0f0" stroke="#2563eb" stroke-width="3" rx="12"/>
+  <text x="720" y="450" text-anchor="middle" font-size="28" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">对比结论</text>
+
+  <!-- 不分层 side -->
+  <rect x="80" y="480" width="620" height="180" fill="#ffffff" stroke="#dc2626" stroke-width="2" rx="8"/>
+  <text x="390" y="524" text-anchor="middle" font-size="24" font-weight="bold" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif">不分层</text>
+  <text x="110" y="568" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">• 一份内容适配所有人</text>
+  <text x="110" y="604" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">• 按最差接收方降质</text>
+  <text x="110" y="640" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">• 高端用户被浪费</text>
+
+  <!-- 分层 side -->
+  <rect x="740" y="480" width="620" height="180" fill="#ffffff" stroke="#16a34a" stroke-width="2" rx="8"/>
+  <text x="1050" y="524" text-anchor="middle" font-size="24" font-weight="bold" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif">分层</text>
+  <text x="770" y="568" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">• N 层独立分发给 N 类接收方</text>
+  <text x="770" y="604" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">• 接收方按带宽自适应选择</text>
+  <text x="770" y="640" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">• 各取所需，互不拖累</text>
+
+  <!-- Arrow between -->
+  <text x="720" y="710" text-anchor="middle" font-size="24" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">分层 = 各取所需，不互相拖累</text>
+</svg>

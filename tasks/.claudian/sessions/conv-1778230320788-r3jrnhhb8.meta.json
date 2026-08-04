@@ -1,0 +1,24 @@
+{
+  "id": "conv-1778230320788-r3jrnhhb8",
+  "providerId": "claude",
+  "title": "Identify AI model used",
+  "titleGenerationStatus": "success",
+  "createdAt": 1778230320790,
+  "updatedAt": 1778234020403,
+  "lastResponseAt": 1778234020403,
+  "sessionId": "eafb0feb-49e8-4cb7-ba7c-4f099b387d89",
+  "providerState": {
+    "providerSessionId": "eafb0feb-49e8-4cb7-ba7c-4f099b387d89"
+  },
+  "currentNote": "work/tasks.md",
+  "usage": {
+    "model": "opus",
+    "inputTokens": 7133,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 25408,
+    "contextWindow": 200000,
+    "contextTokens": 32541,
+    "percentage": 16,
+    "contextWindowIsAuthoritative": true
+  }
+}

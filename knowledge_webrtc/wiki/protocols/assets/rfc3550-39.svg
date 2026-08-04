@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="560" fill="#ffffff" rx="16"/>
+  <text x="720" y="60" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">接收方视角：SSRC vs CSRC</text>
+  <line x1="40" y1="88" x2="1400" y2="88" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Main box -->
+  <rect x="60" y="112" width="1320" height="104" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="100" y="156" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">收到包</text>
+  <text x="100" y="192" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif">检查 SSRC 和 CSRC 字段</text>
+
+  <!-- Left branch: SSRC -->
+  <rect x="120" y="248" width="580" height="280" fill="#f0f0f0" stroke="#991b1b" stroke-width="6" rx="12"/>
+  <text x="410" y="296" font-size="26" font-weight="bold" fill="#991b1b" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SSRC — 有状态实体</text>
+  <line x1="200" y1="316" x2="620" y2="316" stroke="#bbbbbb" stroke-width="4"/>
+  <text x="160" y="356" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">创建/更新流上下文</text>
+  <text x="160" y="396" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">(seq 空间, ts 空间)</text>
+  <text x="160" y="444" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">计算丢包率</text>
+  <text x="160" y="484" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">维护抖动缓冲 → 决定播放时刻</text>
+
+  <!-- Right branch: CSRC -->
+  <rect x="740" y="248" width="580" height="280" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="1030" y="296" font-size="26" font-weight="bold" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">CSRC — 只读备注</text>
+  <line x1="820" y1="316" x2="1240" y2="316" stroke="#bbbbbb" stroke-width="4"/>
+  <text x="780" y="356" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">不创建流上下文</text>
+  <text x="780" y="396" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">不跟踪 seq / ts</text>
+  <text x="780" y="444" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">不计算丢包</text>
+  <text x="780" y="484" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">只传给 UI："当前谁在说话"</text>
+</svg>

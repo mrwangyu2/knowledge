@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="360" viewBox="0 0 1440 360">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="360" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">S 和 C 的含义</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Outer box -->
+  <rect x="60" y="110" width="1320" height="210" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+
+  <!-- S = Synchronization -->
+  <rect x="110" y="140" width="1220" height="72" fill="#bbbbbb" rx="8"/>
+  <text x="160" y="170" font-size="28" font-weight="bold" fill="#1a3f8a" font-family="monospace">S</text>
+  <text x="220" y="170" font-size="24" fill="#1a1a1a" font-family="monospace">= Synchronization（同步）</text>
+  <text x="720" y="170" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif">→ "我有时钟，按我的来"</text>
+
+  <!-- Separator -->
+  <line x1="110" y1="224" x2="1330" y2="224" stroke="#bbbbbb" stroke-width="2"/>
+
+  <!-- C = Contributing -->
+  <rect x="110" y="236" width="1220" height="72" fill="#bbbbbb" rx="8"/>
+  <text x="160" y="266" font-size="28" font-weight="bold" fill="#0d6b2e" font-family="monospace">C</text>
+  <text x="220" y="266" font-size="24" fill="#1a1a1a" font-family="monospace">= Contributing（贡献）</text>
+  <text x="680" y="266" font-size="24" fill="#555555" font-family="system-ui, -apple-system, sans-serif">→ "我贡献内容，时钟归你"</text>
+
+  <!-- Bottom text -->
+  <text x="720" y="344" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">S = 时钟掌控者，C = 内容贡献者。同一个 32 位值，身份不同角色不同。</text>
+</svg>

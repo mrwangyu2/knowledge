@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="680" viewBox="0 0 1440 680">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="680" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SSRC / 序列号 / 时间戳：三层标识的分工</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Outer box -->
+  <rect x="60" y="110" width="1320" height="536" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+
+  <!-- Three concepts -->
+  <text x="120" y="164" font-size="26" font-weight="bold" fill="#1a3f8a" font-family="monospace">SSRC</text>
+  <text x="260" y="164" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">"这个包是谁的？" → 流级别标识</text>
+
+  <text x="120" y="212" font-size="26" font-weight="bold" fill="#0d6b2e" font-family="monospace">Seq Num</text>
+  <text x="300" y="212" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">"这是第几个包？" → 包级别次序</text>
+
+  <text x="120" y="260" font-size="26" font-weight="bold" fill="#8a2e0a" font-family="monospace">Timestamp</text>
+  <text x="324" y="260" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif">"这是什么时候的？" → 包级别时刻</text>
+
+  <line x1="100" y1="288" x2="1340" y2="288" stroke="#bbbbbb" stroke-width="2"/>
+
+  <!-- RTP Header examples -->
+  <rect x="100" y="312" width="1240" height="296" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="4" rx="8"/>
+  <text x="130" y="304" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">RTP 头</text>
+
+  <!-- RTP Header row 1 -->
+  <rect x="140" y="330" width="1160" height="68" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+
+  <rect x="160" y="344" width="240" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="280" y="374" font-size="24" fill="#1a3f8a" font-family="monospace" text-anchor="middle">SSRC=0x4A7B</text>
+
+  <rect x="430" y="344" width="200" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="530" y="374" font-size="24" fill="#0d6b2e" font-family="monospace" text-anchor="middle">seq=142</text>
+
+  <rect x="660" y="344" width="220" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="770" y="374" font-size="24" fill="#8a2e0a" font-family="monospace" text-anchor="middle">ts=22720</text>
+
+  <rect x="910" y="344" width="160" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="990" y="374" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">payload</text>
+
+  <!-- RTP Header row 2 -->
+  <rect x="140" y="408" width="1160" height="68" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+
+  <rect x="160" y="422" width="240" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="280" y="452" font-size="24" fill="#1a3f8a" font-family="monospace" text-anchor="middle">SSRC=0xC2F1</text>
+
+  <rect x="430" y="422" width="200" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="530" y="452" font-size="24" fill="#0d6b2e" font-family="monospace" text-anchor="middle">seq=87</text>
+
+  <rect x="660" y="422" width="220" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="770" y="452" font-size="24" fill="#8a2e0a" font-family="monospace" text-anchor="middle">ts=13920</text>
+
+  <rect x="910" y="422" width="160" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="990" y="452" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">payload</text>
+
+  <!-- RTP Header row 3 -->
+  <rect x="140" y="486" width="1160" height="68" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="8"/>
+
+  <rect x="160" y="500" width="240" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="280" y="530" font-size="24" fill="#1a3f8a" font-family="monospace" text-anchor="middle">SSRC=0x4A7B</text>
+
+  <rect x="430" y="500" width="200" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="530" y="530" font-size="24" fill="#0d6b2e" font-family="monospace" text-anchor="middle">seq=143</text>
+
+  <rect x="660" y="500" width="220" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="770" y="530" font-size="24" fill="#8a2e0a" font-family="monospace" text-anchor="middle">ts=22880</text>
+
+  <rect x="910" y="500" width="160" height="40" fill="#bbbbbb" rx="6"/>
+  <text x="990" y="530" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">payload</text>
+
+  <!-- Annotation arrows/labels -->
+  <text x="280" y="596" font-size="20" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">谁发的</text>
+  <text x="530" y="596" font-size="20" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">第几个</text>
+  <text x="770" y="596" font-size="20" fill="#8a2e0a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">什么时候</text>
+
+  <!-- Bottom message -->
+  <text x="720" y="652" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">三个字段正交，缺一不可</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 980">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="980" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">场景 C: SVC (Scalable Video Coding) — 真正的增量层次</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="3"/>
+
+  <!-- Section 1: Layer dependency -->
+  <text x="60" y="130" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">H.264 SVC 编码器输出三层</text>
+
+  <rect x="60" y="156" width="1320" height="164" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+
+  <!-- Layer 2 -->
+  <rect x="100" y="176" width="48" height="28" fill="#dc2626" rx="4"/>
+  <text x="168" y="200" font-size="24" fill="#dc2626" font-family="monospace">Layer 2 (FHD 增强)</text>
+  <text x="540" y="200" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">需要 L0 + L1 + L2 一起解码</text>
+
+  <!-- Layer 1 -->
+  <rect x="100" y="220" width="48" height="28" fill="#c2410c" rx="4"/>
+  <text x="168" y="244" font-size="24" fill="#c2410c" font-family="monospace">Layer 1 (HD 增强)</text>
+  <text x="540" y="244" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">需要 L0 + L1 一起解码</text>
+
+  <!-- Layer 0 -->
+  <rect x="100" y="264" width="48" height="28" fill="#16a34a" rx="4"/>
+  <text x="168" y="288" font-size="24" fill="#16a34a" font-family="monospace">Layer 0 (基础 360p)</text>
+  <text x="540" y="288" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">可独立解码</text>
+
+  <!-- Dependency arrows on right -->
+  <line x1="780" y1="190" x2="780" y2="280" stroke="#2563eb" stroke-width="2"/>
+  <text x="810" y="210" font-size="18" fill="#2563eb" font-family="monospace">依赖</text>
+  <line x1="840" y1="236" x2="840" y2="280" stroke="#2563eb" stroke-width="2"/>
+  <text x="870" y="256" font-size="18" fill="#2563eb" font-family="monospace">依赖</text>
+
+  <!-- Explanation on right -->
+  <text x="980" y="216" font-size="20" fill="#555555" font-family="monospace">L0 可单独解码</text>
+  <text x="980" y="256" font-size="20" fill="#555555" font-family="monospace">L1 需要 L0 基础</text>
+  <text x="980" y="296" font-size="20" fill="#555555" font-family="monospace">L2 需要 L0+L1</text>
+
+  <!-- Section 2: Bandwidth breakdown -->
+  <text x="60" y="356" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">带宽计算</text>
+
+  <rect x="60" y="376" width="1320" height="132" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+
+  <rect x="100" y="396" width="1240" height="30" fill="#bbbbbb" rx="6"/>
+  <text x="720" y="420" font-size="20" fill="#16a34a" font-family="monospace" text-anchor="middle">基础层: 360p @ 200kbps</text>
+
+  <rect x="100" y="436" width="1240" height="30" fill="#bbbbbb" rx="6"/>
+  <text x="720" y="460" font-size="20" fill="#c2410c" font-family="monospace" text-anchor="middle">+ L1: 补充细节 → 720p @ 200+500=700kbps</text>
+
+  <rect x="100" y="476" width="1240" height="30" fill="#bbbbbb" rx="6"/>
+  <text x="720" y="500" font-size="20" fill="#dc2626" font-family="monospace" text-anchor="middle">+ L2: 补充细节 → 1080p @ 200+500+800=1.5Mbps</text>
+
+  <!-- Section 3: Packet streams -->
+  <text x="60" y="550" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">实际包流（同一个 SSRC，不同 RTP Session）</text>
+
+  <rect x="60" y="572" width="1320" height="156" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+
+  <rect x="100" y="592" width="260" height="48" fill="#f0f0f0" stroke="#16a34a" stroke-width="2" rx="8"/>
+  <text x="230" y="626" font-size="22" fill="#16a34a" font-family="monospace" text-anchor="middle">Session 0 (G0)</text>
+  <text x="400" y="626" font-size="22" fill="#1a1a1a" font-family="monospace">: [L0包] [L0包] [L0包] ...</text>
+
+  <rect x="100" y="652" width="260" height="48" fill="#f0f0f0" stroke="#c2410c" stroke-width="2" rx="8"/>
+  <text x="230" y="686" font-size="22" fill="#c2410c" font-family="monospace" text-anchor="middle">Session 1 (G1)</text>
+  <text x="400" y="686" font-size="22" fill="#1a1a1a" font-family="monospace">: [L1包] [L1包] [L1包] ...</text>
+
+  <rect x="100" y="704" width="260" height="48" fill="#f0f0f0" stroke="#dc2626" stroke-width="2" rx="8"/>
+  <text x="230" y="738" font-size="22" fill="#dc2626" font-family="monospace" text-anchor="middle">Session 2 (G2)</text>
+  <text x="400" y="738" font-size="22" fill="#1a1a1a" font-family="monospace">: [L2包] [L2包] [L2包] ...</text>
+
+  <!-- Section 4: SFU forwarding -->
+  <text x="60" y="780" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif">SFU 按需转发策略</text>
+
+  <!-- Weak receiver -->
+  <rect x="60" y="804" width="400" height="156" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="260" y="844" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">弱网接收方</text>
+  <rect x="100" y="864" width="320" height="44" fill="#bbbbbb" rx="8"/>
+  <text x="260" y="898" font-size="22" fill="#16a34a" font-family="monospace" text-anchor="middle">只转发 L0</text>
+  <text x="260" y="944" font-size="24" font-weight="bold" fill="#16a34a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">→ 360p</text>
+
+  <!-- Medium receiver -->
+  <rect x="520" y="804" width="400" height="156" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="720" y="844" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">中等接收方</text>
+  <rect x="560" y="864" width="320" height="44" fill="#bbbbbb" rx="8"/>
+  <text x="720" y="898" font-size="22" fill="#c2410c" font-family="monospace" text-anchor="middle">转发 L0 + L1</text>
+  <text x="720" y="944" font-size="24" font-weight="bold" fill="#c2410c" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">→ 720p</text>
+
+  <!-- Strong receiver -->
+  <rect x="980" y="804" width="400" height="156" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="1180" y="844" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">强接收方</text>
+  <rect x="1020" y="864" width="320" height="44" fill="#bbbbbb" rx="8"/>
+  <text x="1180" y="898" font-size="22" fill="#dc2626" font-family="monospace" text-anchor="middle">转发全部 (L0+L1+L2)</text>
+  <text x="1180" y="944" font-size="24" font-weight="bold" fill="#dc2626" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">→ 1080p</text>
+</svg>

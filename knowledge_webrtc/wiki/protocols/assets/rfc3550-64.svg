@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="680" viewBox="0 0 1440 680">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="680" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">RTCP 复合包结构及 SDES 内容</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Section 1: RTCP compound packet flow -->
+  <text x="60" y="130" font-size="24" font-weight="bold" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif">每个 RTCP 复合包的结构（原文规定）</text>
+
+  <!-- Box 1: SR or RR -->
+  <rect x="100" y="160" width="260" height="100" fill="#f0f0f0" stroke="#1a3f8a" stroke-width="6" rx="12"/>
+  <text x="230" y="200" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="monospace" text-anchor="middle">SR 或 RR</text>
+  <text x="230" y="236" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">统计数据</text>
+
+  <!-- Arrow 1 -->
+  <line x1="360" y1="210" x2="450" y2="210" stroke="#1a3f8a" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: SDES -->
+  <rect x="470" y="160" width="360" height="100" fill="#f0f0f0" stroke="#0d6b2e" stroke-width="6" rx="12"/>
+  <text x="650" y="200" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="monospace" text-anchor="middle">SDES（含 CNAME）</text>
+  <text x="650" y="236" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">名片信息</text>
+
+  <!-- Arrow 2 -->
+  <line x1="830" y1="210" x2="920" y2="210" stroke="#1a3f8a" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <!-- Box 3: BYE/APP -->
+  <rect x="940" y="160" width="300" height="100" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12" stroke-dasharray="8,4"/>
+  <text x="1090" y="200" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="monospace" text-anchor="middle">BYE / APP</text>
+  <text x="1090" y="236" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">可选</text>
+
+  <!-- Annotation -->
+  <text x="720" y="296" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SR 或 RR 必带 → SDES 必带（含 CNAME）→ BYE/APP 可选</text>
+
+  <!-- Separator -->
+  <line x1="40" y1="330" x2="1400" y2="330" stroke="#bbbbbb" stroke-width="4"/>
+
+  <!-- Section 2: SDES items tree -->
+  <text x="60" y="376" font-size="24" font-weight="bold" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif">SDES 包内可携带的信息</text>
+
+  <rect x="60" y="396" width="1320" height="260" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+
+  <!-- Root: SDES 包 -->
+  <rect x="110" y="420" width="200" height="48" fill="#bbbbbb" rx="8"/>
+  <text x="210" y="454" font-size="22" font-weight="bold" fill="#1a1a1a" font-family="monospace" text-anchor="middle">SDES 包</text>
+
+  <!-- First branch -->
+  <line x1="310" y1="444" x2="350" y2="444" stroke="#1a3f8a" stroke-width="4"/>
+  <text x="370" y="448" font-size="22" fill="#0d6b2e" font-family="monospace">CNAME</text>
+  <text x="480" y="448" font-size="22" fill="#991b1b" font-family="monospace">"alice@pc1"</text>
+  <text x="700" y="448" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">← 必须！身份证号</text>
+
+  <!-- Second branch -->
+  <line x1="310" y1="444" x2="350" y2="488" stroke="#1a3f8a" stroke-width="4"/>
+  <line x1="350" y1="488" x2="370" y2="488" stroke="#1a3f8a" stroke-width="4"/>
+  <text x="390" y="492" font-size="22" fill="#1a1a1a" font-family="monospace">NAME</text>
+  <text x="490" y="492" font-size="22" fill="#1a1a1a" font-family="monospace">"Alice Wang"</text>
+  <text x="700" y="492" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">← 可选：显示名</text>
+
+  <!-- Third branch -->
+  <line x1="310" y1="444" x2="350" y2="528" stroke="#1a3f8a" stroke-width="4"/>
+  <line x1="350" y1="528" x2="370" y2="528" stroke="#1a3f8a" stroke-width="4"/>
+  <text x="390" y="532" font-size="22" fill="#1a1a1a" font-family="monospace">EMAIL</text>
+  <text x="500" y="532" font-size="22" fill="#1a1a1a" font-family="monospace">"alice@example.com"</text>
+  <text x="980" y="532" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">← 可选：邮箱</text>
+
+  <!-- Fourth branch -->
+  <line x1="310" y1="444" x2="350" y2="568" stroke="#1a3f8a" stroke-width="4"/>
+  <line x1="350" y1="568" x2="370" y2="568" stroke="#1a3f8a" stroke-width="4"/>
+  <text x="390" y="572" font-size="22" fill="#1a1a1a" font-family="monospace">TOOL</text>
+  <text x="490" y="572" font-size="22" fill="#1a1a1a" font-family="monospace">"Chrome WebRTC"</text>
+  <text x="980" y="572" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">← 可选：软件名</text>
+
+  <!-- Fifth branch -->
+  <line x1="310" y1="444" x2="350" y2="608" stroke="#1a3f8a" stroke-width="4"/>
+  <line x1="350" y1="608" x2="370" y2="608" stroke="#1a3f8a" stroke-width="4"/>
+  <text x="390" y="612" font-size="22" fill="#1a1a1a" font-family="monospace">...</text>
+  <text x="490" y="612" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">还有 PHONE、LOC、NOTE、PRIV 等可选字段</text>
+</svg>

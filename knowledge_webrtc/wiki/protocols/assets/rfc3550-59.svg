@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#1a3f8a"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="760" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">场景 B: WebRTC Simulcast（层次编码的现代变体）</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="6"/>
+
+  <!-- Zone labels -->
+  <text x="190" y="124" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">发送方</text>
+  <text x="600" y="124" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SFU</text>
+  <text x="1180" y="124" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">接收方</text>
+
+  <!-- Sender box -->
+  <rect x="50" y="144" width="280" height="170" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="12"/>
+  <text x="190" y="194" font-size="26" font-weight="bold" fill="#1a3f8a" font-family="monospace" text-anchor="middle">A</text>
+
+  <!-- SFU box -->
+  <rect x="490" y="144" width="340" height="170" fill="#f0f0f0" stroke="#0d6b2e" stroke-width="6" rx="12"/>
+  <text x="660" y="194" font-size="26" font-weight="bold" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">选层转发</text>
+  <text x="660" y="240" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">按需选层，N 路入 N 路出</text>
+  <text x="660" y="280" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SSRC 不变，对接收方透明</text>
+
+  <!-- Receiver boxes -->
+  <rect x="1010" y="144" width="380" height="50" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="1200" y="178" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">720p → 桌面端（大屏）</text>
+
+  <rect x="1010" y="204" width="380" height="50" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="1200" y="238" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">360p → 平板</text>
+
+  <rect x="1010" y="264" width="380" height="50" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="6" rx="8"/>
+  <text x="1200" y="298" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">180p → 手机（弱网）</text>
+
+  <!-- Arrows: Sender → SFU -->
+  <text x="344" y="170" font-size="20" fill="#555555" font-family="monospace" text-anchor="middle">高 720p/2M</text>
+  <line x1="330" y1="184" x2="490" y2="184" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <text x="344" y="224" font-size="20" fill="#555555" font-family="monospace" text-anchor="middle">中 360p/500k</text>
+  <line x1="330" y1="238" x2="490" y2="238" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <text x="344" y="278" font-size="20" fill="#555555" font-family="monospace" text-anchor="middle">低 180p/150k</text>
+  <line x1="330" y1="292" x2="490" y2="292" stroke="#1a3f8a" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <!-- Arrows: SFU → Receivers -->
+  <line x1="840" y1="184" x2="1010" y2="168" stroke="#0d6b2e" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="840" y1="238" x2="1010" y2="228" stroke="#0d6b2e" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="840" y1="292" x2="1010" y2="288" stroke="#0d6b2e" stroke-width="6" marker-end="url(#arrow)"/>
+
+  <!-- Separator -->
+  <line x1="40" y1="356" x2="1400" y2="356" stroke="#bbbbbb" stroke-width="4"/>
+
+  <!-- Title for comparison table -->
+  <text x="720" y="400" font-size="26" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">关键差异 vs RFC 3550 原始方案</text>
+
+  <!-- Table header -->
+  <rect x="50" y="420" width="320" height="56" fill="#bbbbbb" rx="0"/>
+  <text x="210" y="458" font-size="24" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle"></text>
+
+  <rect x="370" y="420" width="510" height="56" fill="#bbbbbb" rx="0"/>
+  <text x="624" y="458" font-size="22" font-weight="bold" fill="#1a3f8a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">RFC 3550 层次编码</text>
+
+  <rect x="880" y="420" width="510" height="56" fill="#bbbbbb" rx="0"/>
+  <text x="1134" y="458" font-size="22" font-weight="bold" fill="#0d6b2e" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">WebRTC Simulcast</text>
+
+  <!-- Table rows -->
+  <!-- Row 1 -->
+  <rect x="50" y="476" width="320" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="210" y="514" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">层间关系</text>
+  <rect x="370" y="476" width="510" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="624" y="514" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">增量依赖（enhancement）</text>
+  <rect x="880" y="476" width="510" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="1134" y="514" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">独立编码（independent）</text>
+
+  <!-- Row 2 -->
+  <rect x="50" y="532" width="320" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="210" y="570" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">接收方收几层</text>
+  <rect x="370" y="532" width="510" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="624" y="570" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">G0 + 需要的增强层</text>
+  <rect x="880" y="532" width="510" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="1134" y="570" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">只需一层</text>
+
+  <!-- Row 3 -->
+  <rect x="50" y="588" width="320" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="210" y="626" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">带宽弹性</text>
+  <rect x="370" y="588" width="510" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="624" y="626" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">接收方自主加入多播组</text>
+  <rect x="880" y="588" width="510" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="1134" y="626" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SFU 替接收方选层</text>
+
+  <!-- Row 4 -->
+  <rect x="50" y="644" width="320" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="210" y="682" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Session 数</text>
+  <rect x="370" y="644" width="510" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="624" y="682" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">N 层 = N 个 RTP Session</text>
+  <rect x="880" y="644" width="510" height="56" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="2" rx="0"/>
+  <text x="1134" y="682" font-size="22" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">N 层 = N 个 RTP 流</text>
+
+  <text x="720" y="740" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Simulcast 与层次编码核心区别：独立编码 vs 增量依赖，SFU 选层 vs 接收方自选</text>
+</svg>

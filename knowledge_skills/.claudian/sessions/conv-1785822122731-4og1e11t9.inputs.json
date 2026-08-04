@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1785822122731-4og1e11t9",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1785822122864-24r6pwd",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1785822122726-5l3hnpr",
+      "timestamp": 1785822122726,
+      "rawDisplayText": "在吗？",
+      "canonicalText": "在吗？",
+      "context": {
+        "currentNote": {
+          "path": "mattpocock-skills.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "1bbba2228964bc4d0d367e03d1fed01ba2ee47cb5165de4cb2cda5fa1a10bb51",
+      "providerUserMessageId": "6a072175-0af8-4124-8dbf-0ea6de1106c8",
+      "providerAssistantMessageId": "eb7ce837-e095-46d1-b3cc-181f76a72c42"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1785823176099-af307vj",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1785823176088-u9mbr9r",
+      "timestamp": 1785823176088,
+      "rawDisplayText": "整理一份pi coding agent的安装配置记录。参考链接https://github.com/earendil-works/pi获得如何使用nodejs安装、配置api key。然后使用npm安装主题“pi-coder-theme”作者vurihuang。接下来安装mattpocock参考地址：https://github.com/mattpocock/skills",
+      "canonicalText": "整理一份pi coding agent的安装配置记录。参考链接https://github.com/earendil-works/pi获得如何使用nodejs安装、配置api key。然后使用npm安装主题“pi-coder-theme”作者vurihuang。接下来安装mattpocock参考地址：https://github.com/mattpocock/skills",
+      "context": {
+        "editorSelection": {
+          "notePath": "pi-theme-research.md",
+          "mode": "selection",
+          "selectedText": "vurihuang",
+          "lineCount": 1,
+          "startLine": 62
+        }
+      },
+      "images": [],
+      "contentDigest": "c9defd62c802856a17c33ca8a8e90e02008bd7246ee7fa26e1377f5492a93ddb",
+      "providerUserMessageId": "d0f81520-c537-4fd8-96c3-51b59b5b35e0",
+      "providerAssistantMessageId": "7e17c239-2760-4bbc-a62f-09a741dfbeec"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1785824061181-bzphr63",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1785824061175-sb3ivit",
+      "timestamp": 1785824061175,
+      "rawDisplayText": "github 应该可以访问了，你在试试",
+      "canonicalText": "github 应该可以访问了，你在试试",
+      "images": [],
+      "contentDigest": "ff3adab7daef0f5db868e45191539a64e3ea0752f53c35f708c9fb479cb60c49",
+      "providerUserMessageId": "20b98b3a-506b-44f5-b2ad-ad455c06f3e7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1785825021295-1m4zn2z",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1785825021287-ugo1qk3",
+      "timestamp": 1785825021287,
+      "rawDisplayText": "使用网络代理http://127.0.0.1:7890",
+      "canonicalText": "使用网络代理http://127.0.0.1:7890",
+      "images": [],
+      "contentDigest": "987807a1e18604c81b1aec6c25fed836720e3351ae43b439a1abdb4c7c8a7ce9",
+      "providerUserMessageId": "f872383d-7210-473f-aace-5fa7625654fc"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1785825310019-1e65fyf",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1785825310012-pm7jcg9",
+      "timestamp": 1785825310012,
+      "rawDisplayText": "整理一份pi coding agent的安装配置记录。参考链接https://github.com/earendil-works/pi获得如何使用nodejs安装、配置api key。然后使用npm安装主题“pi-coder-theme”作者vurihuang。接下来安装mattpocock参考地址：https://github.com/mattpocock/skills",
+      "canonicalText": "整理一份pi coding agent的安装配置记录。参考链接https://github.com/earendil-works/pi获得如何使用nodejs安装、配置api key。然后使用npm安装主题“pi-coder-theme”作者vurihuang。接下来安装mattpocock参考地址：https://github.com/mattpocock/skills",
+      "images": [],
+      "contentDigest": "c9defd62c802856a17c33ca8a8e90e02008bd7246ee7fa26e1377f5492a93ddb",
+      "providerUserMessageId": "ef1d934b-1f89-4a4a-b816-104034259334",
+      "providerAssistantMessageId": "43a0055e-e9f4-4138-aec5-5c0414c7e0ca"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1785826016431-bexwukc",
+      "userTurnOrdinal": 6,
+      "state": "accepted",
+      "localMessageId": "msg-1785826016424-3q8xpjm",
+      "timestamp": 1785826016424,
+      "rawDisplayText": "文档中增加：使用npm安装`pi-theme-picker`，用于/theme命令切换主题",
+      "canonicalText": "文档中增加：使用npm安装`pi-theme-picker`，用于/theme命令切换主题",
+      "images": [],
+      "contentDigest": "6792b8f90d8190268ebd800a7c7c586ba1ea3240848dbe34a9bbc46762278048",
+      "providerUserMessageId": "ca2e2f35-363e-478e-8ed3-295906efe841",
+      "providerAssistantMessageId": "241abe1a-4b8d-4c48-835c-39e8b1207ac9"
+    }
+  ]
+}

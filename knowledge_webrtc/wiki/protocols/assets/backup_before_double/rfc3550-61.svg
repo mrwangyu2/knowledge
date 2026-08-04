@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 640">
+  <defs>
+    <marker id="arrow" viewBox="0 0 20 20" refX="18" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <path d="M 0 0 L 20 10 L 0 20 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1440" height="640" fill="#ffffff" rx="16"/>
+
+  <!-- Title -->
+  <text x="720" y="56" font-size="30" font-weight="bold" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SSRC：接收方维护的源跟踪表</text>
+  <line x1="40" y1="84" x2="1400" y2="84" stroke="#bbbbbb" stroke-width="3"/>
+
+  <!-- Outer box -->
+  <rect x="60" y="110" width="1320" height="500" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="3" rx="12"/>
+  <text x="90" y="100" font-size="20" fill="#555555" font-family="system-ui, -apple-system, sans-serif">接收方维护 SSRC 表，每个源独立跟踪</text>
+
+  <!-- Table header -->
+  <rect x="100" y="144" width="310" height="64" fill="#bbbbbb" rx="0"/>
+  <text x="254" y="186" font-size="24" font-weight="bold" fill="#2563eb" font-family="monospace" text-anchor="middle">SSRC</text>
+
+  <rect x="410" y="144" width="200" height="64" fill="#bbbbbb" rx="0"/>
+  <text x="510" y="186" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">来源</text>
+
+  <rect x="610" y="144" width="240" height="64" fill="#bbbbbb" rx="0"/>
+  <text x="730" y="186" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">最后 seq</text>
+
+  <rect x="850" y="144" width="240" height="64" fill="#bbbbbb" rx="0"/>
+  <text x="970" y="186" font-size="24" font-weight="bold" fill="#2563eb" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">最后 ts</text>
+
+  <!-- Row 1 -->
+  <rect x="100" y="208" width="310" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="254" y="248" font-size="24" fill="#16a34a" font-family="monospace" text-anchor="middle">0x4A7B..</text>
+
+  <rect x="410" y="208" width="200" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="510" y="248" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Alice</text>
+
+  <rect x="610" y="208" width="240" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="730" y="248" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">142</text>
+
+  <rect x="850" y="208" width="240" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="970" y="248" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">22720</text>
+
+  <!-- Row 2 -->
+  <rect x="100" y="268" width="310" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="254" y="308" font-size="24" fill="#16a34a" font-family="monospace" text-anchor="middle">0xC2F1..</text>
+
+  <rect x="410" y="268" width="200" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="510" y="308" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Bob</text>
+
+  <rect x="610" y="268" width="240" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="730" y="308" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">87</text>
+
+  <rect x="850" y="268" width="240" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="970" y="308" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">13920</text>
+
+  <!-- Row 3 -->
+  <rect x="100" y="328" width="310" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="254" y="368" font-size="24" fill="#16a34a" font-family="monospace" text-anchor="middle">0x8E3D..</text>
+
+  <rect x="410" y="328" width="200" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="510" y="368" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Carol</text>
+
+  <rect x="610" y="328" width="240" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="730" y="368" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">205</text>
+
+  <rect x="850" y="328" width="240" height="60" fill="#f0f0f0" stroke="#bbbbbb" stroke-width="1" rx="0"/>
+  <text x="970" y="368" font-size="24" fill="#1a1a1a" font-family="monospace" text-anchor="middle">32800</text>
+
+  <!-- Separator -->
+  <line x1="100" y1="408" x2="1340" y2="408" stroke="#bbbbbb" stroke-width="1"/>
+
+  <!-- Bottom text -->
+  <text x="720" y="460" font-size="24" fill="#1a1a1a" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">每个源有独立的：序列号空间、时间戳空间、丢包统计</text>
+
+  <!-- Annotation box -->
+  <rect x="260" y="496" width="920" height="88" fill="#bbbbbb" rx="8"/>
+  <text x="720" y="534" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">SSRC = 流的身份证，接收方据此将混杂的包流归类到各发送者</text>
+  <text x="720" y="568" font-size="22" fill="#555555" font-family="system-ui, -apple-system, sans-serif" text-anchor="middle">Seq/TS/丢包统计均以 SSRC 为单位各自维护，互不干扰</text>
+</svg>
